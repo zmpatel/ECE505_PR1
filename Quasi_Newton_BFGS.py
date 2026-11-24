@@ -13,7 +13,7 @@ import sympy as sp
 x1, x2, x3 = sp.symbols('x1 x2 x3')
 
 #Error & Iteration values for TB #MOVE DOWN LATER
-e = 10e-5
+e = 10e-8
 itmax = 1000
 
 # **2D (2 variables)**
@@ -144,7 +144,7 @@ for function in functions_2:
     f, (x, y) = function, functions_2[function]
     it = 0
     prob += 1
-    Bk = sp.eye(2)
+    Bk = sp.eye(2) #B0 = I
     print(f"-------------------------PROBLEM {prob}-------------------------\n")
     #print(f"problem {prob}:")
     print(f"initial guess: x = {x:.4f}, y = {y:.4f}\n")
@@ -165,7 +165,7 @@ for function in functions_3:
     f, (x, y, z) = function, functions_3[function]
     it = 0
     prob += 1
-    Bk = sp.eye(3)
+    Bk = sp.eye(3) #B0 = I
     print(f"-------------------------PROBLEM {prob}-------------------------\n")
     print(f"initial guess: x = {x:.4f}, y = {y:.4f}, z = {z:.4f}\n")
     try:

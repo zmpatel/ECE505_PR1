@@ -8,3 +8,6 @@ Implement the following optimization methods:
 2. Newton's Algorithm (DONE)
 3. Quasi-Newton Algorithm (BFGS)
 4. Conjugate Gradient Algorithm 
+
+#NEED TO C = 1, 10, 100 for each
+#second diff -> Hessian
