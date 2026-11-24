@@ -6,6 +6,7 @@ import sympy as sp
 
 x1, x2, x3 = sp.symbols('x1 x2 x3')
 
+
 #Error & Iteration values
 e = 10e-5
 itmax = 1000
@@ -47,18 +48,11 @@ def newton_step_2(f,x,y):
     return x - s1, y - s2 
 
 
-#calculate ||f''(x)|| / (1+|f'(x)|)
+#calculate ||f'(x)|| / (1+|f(x)|)
 def comp2(f,x,y):
     G = derivative(f,x,y)
-    H = second_derivative(f,x,y)
-
-    det = H.det()
-
-    if abs(det) < 1e-12:
-        raise ValueError("Hessian is singular; Newton step fails.")
     
-    s1, s2 = H.LUsolve(G)
-    return math.sqrt(s1**2 + s2**2) / (1 + math.sqrt(G[0]**2 + G[1]**2))
+    return math.sqrt(G[0]**2 + G[1]**2) / (1 + math.sqrt(f.subs([(x1,x), (x2,y)])**2))
 
 #**3D (3 variables)**
 
@@ -101,18 +95,11 @@ def newton_step_3(f,x,y,z):
     print(f"step length: ||s|| = {math.sqrt(s1**2 + s2**2 + s3**2):.4f}\n")
     return x - s1, y - s2, z - s3
 
-
+# |f'(x)|/(1+ |f(x)|)
 def comp3(f,x,y,z):
     G = derivative_3(f,x,y,z)
-    H = second_derivative_3(f,x,y,z)
-    
-    det = H.det()
-    
-    if abs(det) < 1e-12:
-        raise ValueError("Hessian is singular; Newton step fails.")
 
-    s1, s2, s3 = H.LUsolve(G)
-    return math.sqrt(s1**2 + s2**2 + s3**2) / (1 + math.sqrt(G[0]**2 + G[1]**2 + G[2]**2))
+    return (math.sqrt(G[0]**2 + G[1]**2 + G[2]**2)/(1+math.sqrt(f.subs([(x1,x), (x2,y), (x3,z)])**2)))
 
 
 #***********TEST BENCH************
