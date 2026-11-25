@@ -13,7 +13,7 @@ import sympy as sp
 x1, x2, x3 = sp.symbols('x1 x2 x3')
 
 #Error & Iteration values for TB #MOVE DOWN LATER
-e = 10e-8
+e = 1e-8
 itmax = 1000
 
 # **2D (2 variables)**
@@ -37,7 +37,7 @@ def quasi_newton_bfgs_2(f,x,y,Bk):
     ak = 1.0
 
     f_current = f.subs([(x1,x), (x2,y)])
-    while ak > 1e-12 and f.subs([(x1,x + ak*p0), (x2,y + ak*p1)]) > f_current:
+    while ak > 1e-12 and f.subs([(x1,x + ak*p0), (x2,y + ak*p1)]) >= f_current:
             ak /= 2
     
     x_new = x+ak*p0
@@ -62,7 +62,7 @@ def quasi_newton_bfgs_2(f,x,y,Bk):
 
 
 #calculate ||f'(x)|| / (1+|f(x)|)
-def comp2(f,x,y):
+def norm2(f,x,y):
     G = derivative(f,x,y)
     
     return math.sqrt(G[0]**2 + G[1]**2) / (1 + math.sqrt(f.subs([(x1,x), (x2,y)])**2))
@@ -91,7 +91,7 @@ def quasi_newton_bfgs_3(f,x,y,z,Bk):
     ak = 1.0
 
     f_current = f.subs([(x1,x), (x2,y), (x3,z)])
-    while ak > 1e-12 and f.subs([(x1,x + ak*p0), (x2,y + ak*p1), (x3,z+ak*p2)]) > f_current:
+    while ak > 1e-12 and f.subs([(x1,x + ak*p0), (x2,y + ak*p1), (x3,z+ak*p2)]) >= f_current:
         ak /= 2
     
     x_new = x+ak*p0
@@ -113,7 +113,7 @@ def quasi_newton_bfgs_3(f,x,y,z,Bk):
     return x_new, y_new, z_new, Bk
 
 
-def comp3(f,x,y,z):
+def norm3(f,x,y,z):
     G = derivative_3(f,x,y,z)
 
     return math.sqrt(G[0]**2 + G[1]**2 + G[2]**2) / (1 + math.sqrt(f.subs([(x1,x), (x2,y), (x3,z)])**2))
@@ -126,11 +126,11 @@ def comp3(f,x,y,z):
 
 #functions w/ 2 variables
 #for final test c = 1, 10, 100
-functions_2 = { 5*x1**4 + 6*x2**4 - 6*x1**2 + 2*x1*x2 + 5*x2**2 + 15*x1 - 7*x2 + 13 : (1.0,1.0),
+functions_2 = { 
                 x1**2 + 2*x2**2 - 2*x1*x2 - 2*x2 : (0.0,0.0),
                 100*(x2 - x1**2)**2 + (1 - x1)**2 : (-1.2,1.0),
                 (x1+x2)**4 + x2**2 : (2.0,-2.0),
-                (x1-1)**2 + (x2-1)**2 + 100*(x1**2 + x2**2 - 0.25)**2 : (1.0,-1.0)
+                
 }
 
 #functions w/ 3 variables
@@ -140,25 +140,6 @@ functions_3 = {
 
 prob = 0; #problem #
 #Looping through 2 var functions
-for function in functions_2:
-    f, (x, y) = function, functions_2[function]
-    it = 0
-    prob += 1
-    Bk = sp.eye(2) #B0 = I
-    print(f"-------------------------PROBLEM {prob}-------------------------\n")
-    #print(f"problem {prob}:")
-    print(f"initial guess: x = {x:.4f}, y = {y:.4f}\n")
-
-    try:
-        while (it < itmax and comp2(f,x,y) > e):
-            it +=1
-
-            x,y,Bk = quasi_newton_bfgs_2(f,x,y,Bk)
-            print(f"iteration {it}: x = {x:.4f}, y = {y:.4f}, Bk = {Bk.evalf(4)}\n")
-    except ValueError as v:
-        print(f"error: {v}\n")
-
-    print(f"final: x = {x:.4f}, y = {y:.4f}")
 
 #Looping through 3 var functions (i.e. the one lol)
 for function in functions_3:
@@ -169,7 +150,7 @@ for function in functions_3:
     print(f"-------------------------PROBLEM {prob}-------------------------\n")
     print(f"initial guess: x = {x:.4f}, y = {y:.4f}, z = {z:.4f}\n")
     try:
-        while (it < itmax and comp3(f,x,y,z) > e):
+        while (it < itmax and norm3(f,x,y,z) > e):
             it +=1
             x,y,z,Bk = quasi_newton_bfgs_3(f,x,y,z,Bk)
             print(f"iteration {it}: x = {x:.4f}, y = {y:.4f}, z = {z:.4f}, Bk = {Bk.evalf(4)}\n")
@@ -178,10 +159,47 @@ for function in functions_3:
 
     print(f"final: x = {x:.4f}, y = {y:.4f}, z = {z:.4f}\n")
 
+#**** 2 var functions****
 
+for function in functions_2:
+    f, (x, y) = function, functions_2[function]
+    it = 0
+    prob += 1
+    Bk = sp.eye(2) #B0 = I
+    print(f"-------------------------PROBLEM {prob}-------------------------\n")
+    print(f"initial guess: x = {x:.4f}, y = {y:.4f}\n")
 
+    try:
+        while (it < itmax and norm2(f,x,y) > e):
+            it +=1
 
+            x,y,Bk = quasi_newton_bfgs_2(f,x,y,Bk)
+            print(f"iteration {it}: x = {x:.4f}, y = {y:.4f}, Bk = {Bk.evalf(4)}\n")
+    except ValueError as v:
+        print(f"error: {v}\n")
 
+    print(f"final: x = {x:.4f}, y = {y:.4f}")
+
+#variable function C = 1,10,100
+prob += 1
+for C in [1, 10, 100]:
+    f, (x, y) = (x1-1)**2 + (x2-1)**2 + C*(x1**2 + x2**2 - 0.25)**2, (1.0,-1.0)
+    it = 0
+    Bk = sp.eye(2) #B0 = I
+    print(f"-------------------------PROBLEM {prob}-------------------------\n")
+    print(f"C = {C}\n")
+    print(f"initial guess: x = {x:.4f}, y = {y:.4f}\n")
+    print(f"function: {f}\n")
+
+    try:
+        while (it < itmax and norm2(f,x,y) > e):
+            it +=1
+            x,y,Bk = quasi_newton_bfgs_2(f,x,y,Bk)
+            print(f"iteration {it}: x = {x:.4f}, y = {y:.4f}, Bk = {Bk.evalf(4)}\n")
+    except ValueError as v:
+        print(f"error: {v}\n")
+
+    print(f"final: x = {x:.4f}, y = {y:.4f}")
 
 
     

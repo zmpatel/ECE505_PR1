@@ -1,129 +1,192 @@
 import math
 import sympy as sp
+#verified 
 
 # Newton's method 
 # Newton step: X_{k+1} = X_k - H^{-1}(X_k) * grad(f)(X_k)
+#line search -> ak = 1, if f(x_k + ak * s_k) > f(x_k), then reduce ak=1/2ak until f decreases
+
+x1, x2, x3 = sp.symbols('x1 x2 x3')
 
 
-
-x1, x2 = sp.symbols('x1 x2')
-f = 5*x1**4 + 6*x2**4 - 6*x1**2 + 2*x1*x2 + 5*x2**2+15*x1-7*x2+13
-
-a,b = 1.0, 1.0
-e = 10e-5
+#Error & Iteration values
+e = 1e-5
 itmax = 1000
-it = 0
 
-
+# **2D (2 variables)**
 
 #f'(x)
+def derivative(f,x,y):
+    dx1 = sp.diff(f, x1).subs([(x1,x), (x2,y)])
+    dx2 = sp.diff(f, x2).subs([(x1,x), (x2,y)])
 
-def dx(a, b):
-    return [
-        20 * a**3 - 12 * a + 2 * b + 15,
-        24 * b**3 + 2 * a + 10 * b - 7,
-    ]
-
-def derivative():
-    dx1 = sp.diff(f, x1)
-    dx2 = sp.diff(f, x2)
-    return dx1, dx2 
+    M = sp.Matrix([dx1, dx2])
+    return M
 
 # f''(x)
-def second_derivative():
-    
-    dx1, dx2 = derivative()
-
-    dx1x1 = sp.diff(dx1, x1)
-    dx1x2 = sp.diff(dx1, x2)
-    dx2x1 = sp.diff(dx2, x1)
-    dx2x2 = sp.diff(dx2, x2)
-    return dx1x1, dx1x2, dx2x1, dx2x2
-
-
-def dxx(a, b):
-    return [
-        [60 * a**2 - 12, 2],
-        [2, 72 * b**2 + 10],
-    ]
+def Hessian_2(f,x,y):
+    H = sp.hessian(f, (x1, x2)).subs([(x1, x), (x2, y)])
+    return H
 
 # Solve H * s = g for s, then update x = x - s
-# This is the 2D equivalent of x_{k+1} = x_k - f'(x)/f''(x)
-def newton_step_2():
-    #g depends on # of variables
-    g1,g2 = derivative()
-    g1 = g1.subs([(x1,1), (x2,1)])
-    g2 = g2.subs([(x1,1), (x2,1)])
-    
-    H1, H2, H3, H4 = second_derivative()
-    H1 = H1.subs([(x1,1), (x2,1)])
-    H2 = H2.subs([(x1,1), (x2,1)])
-    H3 = H3.subs([(x1,1), (x2,1)])
-    H4 = H4.subs([(x1,1), (x2,1)])
+# x_{k+1} = x_k - f'(x)/f''(x)
+def newton_step_2(f,x,y):
+    G = derivative(f,x,y)
+    H = Hessian_2(f,x,y)
+    ak = 1.0
 
-
-    det = H1 * H4 - H2 * H3
+    det = H.det()
     if abs(det) < 1e-12:
         raise ValueError("Hessian is singular; Newton step fails.")
-    s1 = (H4 * g1 - H2 * g2) / det
-    s2 = (-H3 * g1 + H1 * g2) / det
-    return x1 - s1, x1 - s2 #WORKS BUT GOTTA MAKE IT SPECIFICS
+    
+    f_current = f.subs([(x1,x), (x2,y)])
+    s1, s2 = H.LUsolve(G)
+    while ak > 1e-12 and f.subs([(x1,x - ak*s1), (x2,y - ak*s2)]) >= f_current:
+        ak /= 2
+
+    x_new = x - ak*s1
+    y_new = y - ak*s2
+
+    print(f"Descent direction: [{-s1:.4f}, {-s2:.4f}]")
+    print(f"step length: ak = {ak:.4f}\n")
+    return x_new, y_new
 
 
-def newton_step(a, b):
-    g = dx(a, b)
-    H = dxx(a, b)
+#calculate ||f'(x)|| / (1+|f(x)|)
+def norm2(f,x,y):
+    G = derivative(f,x,y)
+    
+    return math.sqrt(G[0]**2 + G[1]**2) / (1 + math.sqrt(f.subs([(x1,x), (x2,y)])**2))
 
-    a1, a2 = H[0]
-    b1, b2 = H[1]
-    det = a1 * b2 - a2 * b1
+#**3D (3 variables)**
 
+#f'(x)
+def derivative_3(f,x,y,z):
+    dx1 = sp.diff(f, x1).subs([(x1,x), (x2,y), (x3,z)])
+    dx2 = sp.diff(f, x2).subs([(x1,x), (x2,y), (x3,z)])
+    dx3 = sp.diff(f, x3).subs([(x1,x), (x2,y), (x3,z)])
+    #return gradient vector
+    M = sp.Matrix([dx1, dx2, dx3])
+
+    M = sp.Gradient(f, (x1, x2, x3)).subs([(x1,x), (x2,y), (x3,z)])
+    return M
+
+#f''(x)
+def Hessian_3(f,x,y,z):
+    H = sp.hessian(f, (x1, x2, x3)).subs([(x1, x), (x2, y), (x3, z)])
+    return H
+
+#newtons step 3
+
+def newton_step_3(f,x,y,z):
+    G = derivative_3(f,x,y,z)
+    H = Hessian_3(f,x,y,z)
+    ak = 1.0
+
+    det = H.det()
     if abs(det) < 1e-12:
         raise ValueError("Hessian is singular; Newton step fails.")
 
-    # Solve:
+    f_current = f.subs([(x1,x), (x2,y), (x3,z)])
+    s1, s2, s3 = H.LUsolve(G)
 
-    s1 = (b2 * g[0] - a2 * g[1]) / det
-    s2 = (-b1 * g[0] + a1 * g[1]) / det
+    while ak > 1e-12 and f.subs([(x1,x - ak*s1), (x2,y - ak*s2), (x3,z - ak*s3)]) >= f_current:
+        ak /= 2
 
-    return (a-s1), (b-s2)
+    x_new = x - ak*s1
+    y_new = y - ak*s2
+    z_new = z - ak*s3
 
-#iteration
-#calculate ||dx|| / (1+||ddxy||)
-def comp(a,b):
-    g1,g2 = derivative()
-    g1 = g1.subs([(x1,a), (x2,b)])
-    g2 = g2.subs([(x1,a), (x2,b)])
+    print(f"search direction: [{s1:.4f}, {s2:.4f}, {s3:.4f}]")
+    print(f"step length: ak = {ak:.4f}\n")
+    return x_new, y_new, z_new
 
-    H1, H2, H3, H4 = second_derivative()
+# |f'(x)|/(1+ |f(x)|)
+def norm3(f,x,y,z):
+    G = derivative_3(f,x,y,z)
 
-    H1 = H1.subs([(x1,a), (x2,b)])
-    H2 = H2.subs([(x1,a), (x2,b)])
-    H3 = H3.subs([(x1,a), (x2,b)])
-    H4 = H4.subs([(x1,a), (x2,b)])
-    det = H1 * H4 - H2 * H3
-    
-    s1 = (H4 * g1 - H2 * g2) / det
-    s2 = (-H3 * g1 + H1 * g2) / det
-    return math.sqrt(s1**2 + s2**2) / (1 + math.sqrt(g1**2 + g2**2))
+    return (math.sqrt(G[0]**2 + G[1]**2 + G[2]**2)/(1+math.sqrt(f.subs([(x1,x), (x2,y), (x3,z)])**2)))
 
 
-print("general:", derivative())
-print("actual:", dx(a,b))
-print("general:", second_derivative())
-print("actual:", dxx(a, b))
-print("general:", newton_step_2())
-print("actual:", newton_step(a, b))
+#***********TEST BENCH************
 
-#x0 = (0,0)
-x = 0
-y = 0
-while (it < itmax and comp(x,y) > e):
-    it +=1
-    x,y = newton_step(x,y)
-    print(f"iteration {it}: x = {x:.4f}, y = {y:.4f}\n")
+#TEST FUNCTIONS FROM 10d.
+#functions dictionary with function as key and initial guess as value
 
-print(f"final: x = {x:.4f}, y = {y:.4f}\n")
+#functions w/ 2 variables
+#for final test c = 1, 10, 100
+functions_2 = { 
+                x1**2 + 2*x2**2 - 2*x1*x2 - 2*x2 : (0.0,0.0),
+                100*(x2 - x1**2)**2 + (1 - x1)**2 : (-1.2,1.0),
+                (x1+x2)**4 + x2**2 : (2.0,-2.0),
+}
+
+#functions w/ 3 variables
+functions_3 = {
+                x1**2 + x2**2 + x3**2 : (1.0,1.0,1.0)
+}
+
+prob = 0; #problem #
+
+#Looping through 3 var functions (i.e. the one lol)
+for function in functions_3:
+    f, (x, y, z) = function, functions_3[function]
+    it = 0
+    prob += 1
+    print(f"-------------------------PROBLEM {prob}-------------------------\n")
+    print(f"initial guess: x = {x:.4f}, y = {y:.4f}, z = {z:.4f}\n")
+    print(f"function: {f}\n")
+
+    try:
+        while (it < itmax and norm3(f,x,y,z) > e):
+            it +=1
+            x,y,z = newton_step_3(f,x,y,z)
+            print(f"iteration {it}: x = {x:.4f}, y = {y:.4f}, z = {z:.4f}\n")
+    except ValueError as v:
+        print(f"error: {v}\n")
+
+    print(f"final: x = {x:.4f}, y = {y:.4f}, z = {z:.4f}\n")
+
+
+#Looping through 2 var functions
+for function in functions_2:
+    f, (x, y) = function, functions_2[function]
+    it = 0
+    prob += 1
+    print(f"-------------------------PROBLEM {prob}-------------------------\n")
+    print(f"function: {f}\n")
+    print(f"initial guess: x = {x:.4f}, y = {y:.4f}\n")
+
+    try:
+        while (it < itmax and norm2(f,x,y) > e):
+            it +=1
+            x,y = newton_step_2(f,x,y)
+            print(f"iteration {it}: x = {x:.4f}, y = {y:.4f}\n")
+    except ValueError as v:
+        print(f"error: {v}\n")
+
+    print(f"final: x = {x:.4f}, y = {y:.4f}")
+
+
+#variable function C = 1,10,100
+prob += 1
+for C in [1, 10, 100]:
+    f, (x, y) = (x1-1)**2 + (x2-1)**2 + C*(x1**2 + x2**2 - 0.25)**2, (1.0,-1.0)
+    it = 0
+    print(f"-------------------------PROBLEM {prob}-------------------------\n")
+    print(f"C = {C}\n")
+    print(f"initial guess: x = {x:.4f}, y = {y:.4f}\n")
+    print(f"function: {f}\n")
+
+    try:
+        while (it < itmax and norm2(f,x,y) > e):
+            it +=1
+            x,y = newton_step_2(f,x,y)
+            print(f"iteration {it}: x = {x:.4f}, y = {y:.4f}\n")
+    except ValueError as v:
+        print(f"error: {v}\n")
+
+    print(f"final: x = {x:.4f}, y = {y:.4f}")
 
 
 
