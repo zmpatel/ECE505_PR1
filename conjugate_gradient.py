@@ -7,6 +7,9 @@ import sympy as sp
 #pk = rk + beta * pk-1
 #rk = b - A * xk
 #beta = (rk^T * rk) / (rk-1^T * rk-1)
+#Implement Armijo condition:
+    # f(xk+akpk) <= f(xk)+ c akpk^Tf'(xk)
+    # c = 1e-4 (10^-4)
 
 
 x1, x2, x3 = sp.symbols('x1 x2 x3')
@@ -14,6 +17,7 @@ x1, x2, x3 = sp.symbols('x1 x2 x3')
 #Error & Iteration values
 e = 1e-5
 itmax = 1000
+c = 1e-4
 
 # **2D (2 variables)**
 
@@ -34,10 +38,12 @@ def conjugate_grad_2(f,x,y,pk):
     p0 = pk[0]
     p1 = pk[1]
 
-    # Backtracking line search: shrink step size until function value decreases
+    # Backtracking line search w/ armijo condition: shrink step size until function value decreases
     ak = 1.0
     f_current = float(f.subs({x1: x, x2: y}))
-    while ak > 1e-12 and float(f.subs({x1: x + ak * p0, x2: y + ak * p1})) >= f_current:
+    s = p0 * G[0] + p1 * G[1]
+
+    while ak > 1e-12 and float(f.subs({x1: x + ak * p0, x2: y + ak * p1})) > f_current + c * ak * s:
         ak /= 2.0
 
     # # Update position: x_{k+1} = x_k + ak * pk
@@ -57,6 +63,9 @@ def conjugate_grad_2(f,x,y,pk):
 
     rk = rk_next
 
+    print(f"Descent Direction: p = ({p0:.4f}, {p1:.4f})")
+    print(f"Step Size: ak = {ak:.4f}")
+    
     return x_new, y_new, pk
 
     
@@ -88,7 +97,9 @@ def conjugate_grad_3(f,x,y,z,pk):
     p2 = pk[2]
 
     f_current = float(f.subs({x1: x, x2: y, x3: z}))
-    while ak > 1e-12 and float(f.subs({x1: x + ak * p0, x2: y + ak * p1, x3: z + ak * p2})) >= f_current:
+    s = p0 * G[0] + p1 * G[1] + p2 * G[2]
+
+    while ak > 1e-12 and float(f.subs({x1: x + ak * p0, x2: y + ak * p1, x3: z + ak * p2})) > f_current + c * ak * s:
         ak /= 2.0
 
     # # Update position: x_{k+1} = x_k + ak * pk
@@ -107,6 +118,9 @@ def conjugate_grad_3(f,x,y,z,pk):
     p2 = rk_next[2] + beta * p2
     pk = sp.Matrix([p0, p1, p2])
     rk = rk_next
+
+    print(f"Descent Direction: p = ({p0:.4f}, {p1:.4f}, {p2:.4f})")
+    print(f"Step Size: ak = {ak:.4f}")
 
     return x_new, y_new, z_new, pk
 
@@ -185,7 +199,6 @@ for C in [1, 10, 100]:
     print(f"-------------------------PROBLEM {prob}-------------------------\n")
     print(f"C = {C}\n")
     print(f"initial guess: x = {x:.4f}, y = {y:.4f}\n")
-    print(f"function: {f}\n")
 
     try:
         while (it < itmax and norm2(f,x,y) > e):

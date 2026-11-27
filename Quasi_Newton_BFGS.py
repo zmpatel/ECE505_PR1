@@ -2,10 +2,12 @@
 #B0 = I
 #xk+1 = xk+akpk
 #pk = -B0^-1*f'(x)
-#ak = 1, ak = 1/2 ak if f(xk + akpk) > f(xk)
 #Bk+1 = Bk - ((Bk*sk)*(Bk*sk)^T)/(sk^T*Bk*sk)) + ((yk*yk^T)/(yk^T*sk)))
 #Sk = xk+1 - xk
 #Yk = f'(xk+1) - f'(xk)
+#Implement Armijo condition:
+    # f(xk+akpk) <= f(xk)+ c akpk^Tf'(xk) -> ak = 1, ak = 1/2 ak if f(xk + akpk) > f(xk)
+    # c = 1e-4 (10^-4)
 
 import math
 import sympy as sp
@@ -15,6 +17,8 @@ x1, x2, x3 = sp.symbols('x1 x2 x3')
 #Error & Iteration values for TB #MOVE DOWN LATER
 e = 1e-8
 itmax = 1000
+c = 1e-4
+
 
 # **2D (2 variables)**
 
@@ -37,7 +41,9 @@ def quasi_newton_bfgs_2(f,x,y,Bk):
     ak = 1.0
 
     f_current = f.subs([(x1,x), (x2,y)])
-    while ak > 1e-12 and f.subs([(x1,x + ak*p0), (x2,y + ak*p1)]) >= f_current:
+    s = p0 * G[0] + p1 * G[1]
+
+    while ak > 1e-12 and f.subs([(x1,x + ak*p0), (x2,y + ak*p1)]) > f_current + c * ak * s:
             ak /= 2
     
     x_new = x+ak*p0
@@ -91,7 +97,9 @@ def quasi_newton_bfgs_3(f,x,y,z,Bk):
     ak = 1.0
 
     f_current = f.subs([(x1,x), (x2,y), (x3,z)])
-    while ak > 1e-12 and f.subs([(x1,x + ak*p0), (x2,y + ak*p1), (x3,z+ak*p2)]) >= f_current:
+    s = p0 * G[0] + p1 * G[1] + p2 * G[2]
+
+    while ak > 1e-12 and f.subs([(x1,x + ak*p0), (x2,y + ak*p1), (x3,z+ak*p2)]) > f_current + c * ak * s:
         ak /= 2
     
     x_new = x+ak*p0

@@ -9,5 +9,8 @@ Implement the following optimization methods:
 3. Quasi-Newton Algorithm (BFGS)
 4. Conjugate Gradient Algorithm 
 
-#NEED TO C = 1, 10, 100 for each
-#second diff -> Hessian
+TO DO:
+1. Implement Armijo condition:
+    f(xk+akpk) <= f(xk)+ c akpk^Tf'(xk)
+    c = 1e-4 (10^-4)
+2. Clean up

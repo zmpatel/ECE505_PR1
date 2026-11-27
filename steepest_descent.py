@@ -6,12 +6,16 @@ import sympy as sp
 #Xk+1 = xk + akpk
 #pk = -f'(x)
 #ak = 1, ak = 1/2 ak if f(xk + akpk) > f(xk)
+#Implement Armijo condition:
+    # f(xk+akpk) <= f(xk)+ c akpk^Tf'(xk)
+    # c = 1e-4 (10^-4)
 
 x1, x2, x3 = sp.symbols('x1 x2 x3')
 
 #Error & Iteration values
 e = 1e-5
 itmax = 1000
+c = 1e-4
 
 # **2D (2 variables)**
 
@@ -31,12 +35,17 @@ def steepest_descent_2(f,x,y):
 
     ak = 1.0
     f_current = f.subs([(x1,x), (x2,y)])
+    s = p0 * G[0] + p1 * G[1]
 
-    while ak > 1e-12 and f.subs([(x1,x + ak*p0), (x2,y + ak*p1)]) >= f_current:
+    while ak > 1e-12 and f.subs([(x1,x + ak*p0), (x2,y + ak*p1)]) > f_current + c * ak * s:
         ak /= 2
 
     x = x+ak*p0
     y = y+ak*p1
+
+    print(f"Descent Direction: p = ({p0:.4f}, {p1:.4f})")
+    print(f"Step Size: ak = {ak:.4f}")
+
     return x, y
 
 
@@ -66,15 +75,19 @@ def steepest_descent_3(f,x,y,z):
 
     ak = 1.0  # Initial step size
     f_current = float(f.subs({x1: x, x2: y, x3: z}))
+    s = p0 * G[0] + p1 * G[1] + p2 * G[2]
     
     # Backtracking line search: shrink step size until function value decreases
-    while ak > 1e-12 and float(f.subs({x1: x + ak * p0, x2: y + ak * p1, x3: z + ak * p2})) >= f_current:
+    while ak > 1e-12 and float(f.subs({x1: x + ak * p0, x2: y + ak * p1, x3: z + ak * p2})) > f_current + c * ak * s:
         ak /= 2.0
         
     # Update coordinates using the valid step size
     x_new = x + ak * p0
     y_new = y + ak * p1
     z_new = z + ak * p2
+
+    print(f"Descent Direction: p = ({p0:.4f}, {p1:.4f}, {p2:.4f})")
+    print(f"Step Size: ak = {ak:.4f}")
     
     return x_new, y_new, z_new
 

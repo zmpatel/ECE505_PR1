@@ -5,6 +5,9 @@ import sympy as sp
 # Newton's method 
 # Newton step: X_{k+1} = X_k - H^{-1}(X_k) * grad(f)(X_k)
 #line search -> ak = 1, if f(x_k + ak * s_k) > f(x_k), then reduce ak=1/2ak until f decreases
+#Implement Armijo condition:
+    # f(xk+akpk) <= f(xk)+ c akpk^Tf'(xk)
+    # c = 1e-4 (10^-4)
 
 x1, x2, x3 = sp.symbols('x1 x2 x3')
 
@@ -12,6 +15,7 @@ x1, x2, x3 = sp.symbols('x1 x2 x3')
 #Error & Iteration values
 e = 1e-5
 itmax = 1000
+c = 1e-4
 
 # **2D (2 variables)**
 
@@ -28,26 +32,32 @@ def Hessian_2(f,x,y):
     H = sp.hessian(f, (x1, x2)).subs([(x1, x), (x2, y)])
     return H
 
-# Solve H * s = g for s, then update x = x - s
-# x_{k+1} = x_k - f'(x)/f''(x)
+# pk = -H^-1 * f'(x)
+# x_{k+1} = x_k + ak * pk
+#armijo's condition : f(xk+akpk) <= f(xk)+ c akpk^Tf'(xk)
 def newton_step_2(f,x,y):
-    G = derivative(f,x,y)
-    H = Hessian_2(f,x,y)
+    G = derivative(f,x,y) #f'(x)
+    H = Hessian_2(f,x,y) #f''(x)
     ak = 1.0
 
     det = H.det()
     if abs(det) < 1e-12:
         raise ValueError("Hessian is singular; Newton step fails.")
-    
+
+    pk = -H.LUsolve(G)
+    pk0, pk1 = pk
+
     f_current = f.subs([(x1,x), (x2,y)])
-    s1, s2 = H.LUsolve(G)
-    while ak > 1e-12 and f.subs([(x1,x - ak*s1), (x2,y - ak*s2)]) >= f_current:
+    #armijo's condition: f(xk+akpk) <= f(xk)+ c akpk^Tf'(xk)
+    s = pk0 * G[0] + pk1 * G[1]  # pk^T * f'(x)
+
+    while ak > 1e-12 and f.subs([(x1,x + ak*pk0), (x2,y + ak*pk1)]) > f_current + c * ak * s:
         ak /= 2
 
-    x_new = x - ak*s1
-    y_new = y - ak*s2
+    x_new = x + ak*pk0
+    y_new = y + ak*pk1
 
-    print(f"Descent direction: [{-s1:.4f}, {-s2:.4f}]")
+    print(f"Descent direction: [{pk0:.4f}, {pk1:.4f}]")
     print(f"step length: ak = {ak:.4f}\n")
     return x_new, y_new
 
@@ -66,9 +76,8 @@ def derivative_3(f,x,y,z):
     dx2 = sp.diff(f, x2).subs([(x1,x), (x2,y), (x3,z)])
     dx3 = sp.diff(f, x3).subs([(x1,x), (x2,y), (x3,z)])
     #return gradient vector
-    M = sp.Matrix([dx1, dx2, dx3])
+    M = sp.Matrix([dx1, dx2, dx3]).subs([(x1,x), (x2,y), (x3,z)])
 
-    M = sp.Gradient(f, (x1, x2, x3)).subs([(x1,x), (x2,y), (x3,z)])
     return M
 
 #f''(x)
@@ -87,17 +96,20 @@ def newton_step_3(f,x,y,z):
     if abs(det) < 1e-12:
         raise ValueError("Hessian is singular; Newton step fails.")
 
-    f_current = f.subs([(x1,x), (x2,y), (x3,z)])
-    s1, s2, s3 = H.LUsolve(G)
+    pk = -H.LUsolve(G)
+    pk0, pk1, pk2 = pk
 
-    while ak > 1e-12 and f.subs([(x1,x - ak*s1), (x2,y - ak*s2), (x3,z - ak*s3)]) >= f_current:
+    s = pk0 * G[0] + pk1 * G[1] + pk2 * G[2]  # pk^T * f'(x)
+    f_current = f.subs([(x1,x), (x2,y), (x3,z)])
+
+    while ak > 1e-12 and f.subs([(x1,x + ak*pk0), (x2,y + ak*pk1), (x3,z + ak*pk2)]) > f_current + c * ak * s:
         ak /= 2
 
-    x_new = x - ak*s1
-    y_new = y - ak*s2
-    z_new = z - ak*s3
+    x_new = x + ak*pk0
+    y_new = y + ak*pk1
+    z_new = z + ak*pk2
 
-    print(f"search direction: [{s1:.4f}, {s2:.4f}, {s3:.4f}]")
+    print(f"search direction: [{pk0:.4f}, {pk1:.4f}, {pk2:.4f}]")
     print(f"step length: ak = {ak:.4f}\n")
     return x_new, y_new, z_new
 
