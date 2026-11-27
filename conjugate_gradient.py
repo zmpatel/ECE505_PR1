@@ -2,14 +2,11 @@ import math
 import sympy as sp
 
 #CONJUGATE GRADIENT METHOD
-#ak = backtracking line search
+#ak = backtracking line search w/ Armijo condition
 #xk+1 = xk + ak * pk
 #pk = rk + beta * pk-1
 #rk = b - A * xk
 #beta = (rk^T * rk) / (rk-1^T * rk-1)
-#Implement Armijo condition:
-    # f(xk+akpk) <= f(xk)+ c akpk^Tf'(xk)
-    # c = 1e-4 (10^-4)
 
 
 x1, x2, x3 = sp.symbols('x1 x2 x3')
@@ -38,7 +35,7 @@ def conjugate_grad_2(f,x,y,pk):
     p0 = pk[0]
     p1 = pk[1]
 
-    # Backtracking line search w/ armijo condition: shrink step size until function value decreases
+    # Backtracking line search w/ Armijo condition
     ak = 1.0
     f_current = float(f.subs({x1: x, x2: y}))
     s = p0 * G[0] + p1 * G[1]
@@ -47,7 +44,6 @@ def conjugate_grad_2(f,x,y,pk):
         ak /= 2.0
 
     # # Update position: x_{k+1} = x_k + ak * pk
-    # xk = xk + ak * pk
     x_new, y_new = x + ak * p0, y + ak * p1
 
     # # New residual: r_{k+1} = -f'(x_{k+1})
@@ -102,17 +98,16 @@ def conjugate_grad_3(f,x,y,z,pk):
     while ak > 1e-12 and float(f.subs({x1: x + ak * p0, x2: y + ak * p1, x3: z + ak * p2})) > f_current + c * ak * s:
         ak /= 2.0
 
-    # # Update position: x_{k+1} = x_k + ak * pk
-    # xk = xk + ak * pk
+    # Update position: x_{k+1} = x_k + ak * pk
     x_new, y_new, z_new = x + ak * p0, y + ak * p1, z + ak * p2
 
-    # # New residual: r_{k+1} = -f'(x_{k+1})
+    # New residual: r_{k+1} = -f'(x_{k+1})
     rk_next = -derivative_3(f,x_new,y_new,z_new)
 
-    # # Beta: (r_{k+1}^T * r_{k+1}) / (rk^T * rk)
+    # Beta: (r_{k+1}^T * r_{k+1}) / (rk^T * rk)
     beta = (rk_next.T * rk_next)[0] / (rk.T * rk)[0]
 
-    # # Update search direction: p_{k+1} = r_{k+1} + beta * pk
+    # Update search direction: p_{k+1} = r_{k+1} + beta * pk
     p0 = rk_next[0] + beta * p0
     p1 = rk_next[1] + beta * p1
     p2 = rk_next[2] + beta * p2
@@ -137,7 +132,7 @@ def norm3(f,x,y,z):
 #functions dictionary with function as key and initial guess as value
 
 #functions w/ 2 variables
-#for final test c = 1, 10, 100
+#Problems 2,3,4
 functions_2 = {
                 x1**2 + 2*x2**2 - 2*x1*x2 - 2*x2 : (0.0,0.0),
                 100*(x2 - x1**2)**2 + (1 - x1)**2 : (-1.2,1.0),
@@ -145,6 +140,7 @@ functions_2 = {
 }
 
 #functions w/ 3 variables
+#problem 1
 functions_3 = {
                 x1**2 + x2**2 + x3**2 : (1.0,1.0,1.0)
 }
@@ -190,6 +186,7 @@ for function in functions_2:
 
     print(f"final: x = {x:.4f}, y = {y:.4f}")
 
+#Problem #5
 #Variable function C = 1,10,100
 prob += 1
 for C in [1, 10, 100]:
