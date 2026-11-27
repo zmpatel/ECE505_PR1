@@ -8,6 +8,6 @@ This repository contains 4 files appropriately names which implement the followi
 3. Quasi-Newton Algorithm (BFGS)
 4. Conjugate Gradient Algorithm 
 
-All of the above optimization implement the backtracking line search with Armijo's condition. 
+All of the above optimization methods implement the backtracking line search with Armijo's condition. 
 It starts with ak = 1, then verfies armijo's condition :f(xk+akpk) > f(xk)+ c akpk^Tf'(xk). 
 If True then ak = 1/2 ak otherwise otherwise ak = ak.
