@@ -1,13 +1,10 @@
 import math
 import sympy as sp
-#verified 
 
 # Newton's method 
 # Newton step: X_{k+1} = X_k - H^{-1}(X_k) * grad(f)(X_k)
-#line search -> ak = 1, if f(x_k + ak * s_k) > f(x_k), then reduce ak=1/2ak until f decreases
-#Implement Armijo condition:
-    # f(xk+akpk) <= f(xk)+ c akpk^Tf'(xk)
-    # c = 1e-4 (10^-4)
+# line search = backtracking line search w/ Armijo condition
+# armijo's condition : f(xk+akpk) <= f(xk)+ c akpk^Tf'(xk)
 
 x1, x2, x3 = sp.symbols('x1 x2 x3')
 
@@ -15,7 +12,7 @@ x1, x2, x3 = sp.symbols('x1 x2 x3')
 #Error & Iteration values
 e = 1e-5
 itmax = 1000
-c = 1e-4
+c = 1e-4 # Armijo constant
 
 # **2D (2 variables)**
 
@@ -34,7 +31,6 @@ def Hessian_2(f,x,y):
 
 # pk = -H^-1 * f'(x)
 # x_{k+1} = x_k + ak * pk
-#armijo's condition : f(xk+akpk) <= f(xk)+ c akpk^Tf'(xk)
 def newton_step_2(f,x,y):
     G = derivative(f,x,y) #f'(x)
     H = Hessian_2(f,x,y) #f''(x)
@@ -48,7 +44,6 @@ def newton_step_2(f,x,y):
     pk0, pk1 = pk
 
     f_current = f.subs([(x1,x), (x2,y)])
-    #armijo's condition: f(xk+akpk) <= f(xk)+ c akpk^Tf'(xk)
     s = pk0 * G[0] + pk1 * G[1]  # pk^T * f'(x)
 
     while ak > 1e-12 and f.subs([(x1,x + ak*pk0), (x2,y + ak*pk1)]) > f_current + c * ak * s:
@@ -85,8 +80,7 @@ def Hessian_3(f,x,y,z):
     H = sp.hessian(f, (x1, x2, x3)).subs([(x1, x), (x2, y), (x3, z)])
     return H
 
-#newtons step 3
-
+#newtons step 3D
 def newton_step_3(f,x,y,z):
     G = derivative_3(f,x,y,z)
     H = Hessian_3(f,x,y,z)
@@ -126,7 +120,7 @@ def norm3(f,x,y,z):
 #functions dictionary with function as key and initial guess as value
 
 #functions w/ 2 variables
-#for final test c = 1, 10, 100
+#problems 2,3,4
 functions_2 = { 
                 x1**2 + 2*x2**2 - 2*x1*x2 - 2*x2 : (0.0,0.0),
                 100*(x2 - x1**2)**2 + (1 - x1)**2 : (-1.2,1.0),
@@ -134,6 +128,7 @@ functions_2 = {
 }
 
 #functions w/ 3 variables
+#problem 1
 functions_3 = {
                 x1**2 + x2**2 + x3**2 : (1.0,1.0,1.0)
 }
@@ -181,6 +176,7 @@ for function in functions_2:
 
 
 #variable function C = 1,10,100
+#Problem #5
 prob += 1
 for C in [1, 10, 100]:
     f, (x, y) = (x1-1)**2 + (x2-1)**2 + C*(x1**2 + x2**2 - 0.25)**2, (1.0,-1.0)

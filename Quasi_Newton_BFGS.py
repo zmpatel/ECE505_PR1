@@ -5,20 +5,17 @@
 #Bk+1 = Bk - ((Bk*sk)*(Bk*sk)^T)/(sk^T*Bk*sk)) + ((yk*yk^T)/(yk^T*sk)))
 #Sk = xk+1 - xk
 #Yk = f'(xk+1) - f'(xk)
-#Implement Armijo condition:
-    # f(xk+akpk) <= f(xk)+ c akpk^Tf'(xk) -> ak = 1, ak = 1/2 ak if f(xk + akpk) > f(xk)
-    # c = 1e-4 (10^-4)
+#Step size ak = backtracking line search w/ Armijo condition
 
 import math
 import sympy as sp
 
 x1, x2, x3 = sp.symbols('x1 x2 x3')
 
-#Error & Iteration values for TB #MOVE DOWN LATER
+#Error & Iteration values for TB 
 e = 1e-8
 itmax = 1000
 c = 1e-4
-
 
 # **2D (2 variables)**
 
@@ -37,7 +34,6 @@ def quasi_newton_bfgs_2(f,x,y,Bk):
     p0 = p[0]
     p1 = p[1]
     
-
     ak = 1.0
 
     f_current = f.subs([(x1,x), (x2,y)])
@@ -50,8 +46,7 @@ def quasi_newton_bfgs_2(f,x,y,Bk):
     y_new = y+ak*p1
 
     #Bk+1 = Bk - ((Bk*sk)*(Bk*sk)^T)/(sk^T*Bk*sk)) + ((yk*yk^T)/(yk^T*sk)))
-    #Sk = xk+1 - xk
-    #Yk = f'(xk+1) - f'(xk)
+    #Sk = xk+1 - xk, Yk = f'(xk+1) - f'(xk)
 
     G_new = derivative(f,x_new,y_new)
 
@@ -59,13 +54,12 @@ def quasi_newton_bfgs_2(f,x,y,Bk):
     yk = G_new - G
 
     #update Bk
-
     Bk = Bk - ((Bk*sk)*(Bk*sk).T)/(sk.T*Bk*sk)[0] + ((yk*yk.T)/(yk.T*sk)[0])
-    
+
+    print(f"Descent Direction: p = ({p0:.4f}, {p1:.4f})")
+    print(f"Step Size: ak = {ak:.4f}")
 
     return x_new, y_new, Bk
-
-
 
 #calculate ||f'(x)|| / (1+|f(x)|)
 def norm2(f,x,y):
@@ -107,8 +101,7 @@ def quasi_newton_bfgs_3(f,x,y,z,Bk):
     z_new = z+ak*p2
 
     #Bk+1 = Bk - ((Bk*sk)*(Bk*sk)^T)/(sk^T*Bk*sk)) + ((yk*yk^T)/(yk^T*sk)))
-    #Sk = xk+1 - xk
-    #Yk = f'(xk+1) - f'(xk)
+    #Sk = xk+1 - xk, Yk = f'(xk+1) - f'(xk)
 
     G_new = derivative_3(f,x_new,y_new,z_new)
 
@@ -117,6 +110,9 @@ def quasi_newton_bfgs_3(f,x,y,z,Bk):
 
     #update Bk
     Bk = Bk - ((Bk*sk)*(Bk*sk).T)/(sk.T*Bk*sk)[0] + ((yk*yk.T)/(yk.T*sk)[0])
+
+    print(f"Descent Direction: p = ({p0:.4f}, {p1:.4f}, {p2:.4f})")
+    print(f"Step Size: ak = {ak:.4f}")
 
     return x_new, y_new, z_new, Bk
 
@@ -133,7 +129,7 @@ def norm3(f,x,y,z):
 #functions dictionary with function as key and initial guess as value
 
 #functions w/ 2 variables
-#for final test c = 1, 10, 100
+#problems 2,3,4
 functions_2 = { 
                 x1**2 + 2*x2**2 - 2*x1*x2 - 2*x2 : (0.0,0.0),
                 100*(x2 - x1**2)**2 + (1 - x1)**2 : (-1.2,1.0),
@@ -142,12 +138,12 @@ functions_2 = {
 }
 
 #functions w/ 3 variables
+#problem 1
 functions_3 = {
                 x1**2 + x2**2 + x3**2 : (1.0,1.0,1.0)
 }
 
 prob = 0; #problem #
-#Looping through 2 var functions
 
 #Looping through 3 var functions (i.e. the one lol)
 for function in functions_3:
@@ -167,8 +163,7 @@ for function in functions_3:
 
     print(f"final: x = {x:.4f}, y = {y:.4f}, z = {z:.4f}\n")
 
-#**** 2 var functions****
-
+#Looping through 2 var functions
 for function in functions_2:
     f, (x, y) = function, functions_2[function]
     it = 0
@@ -189,6 +184,7 @@ for function in functions_2:
     print(f"final: x = {x:.4f}, y = {y:.4f}")
 
 #variable function C = 1,10,100
+#Problem #5
 prob += 1
 for C in [1, 10, 100]:
     f, (x, y) = (x1-1)**2 + (x2-1)**2 + C*(x1**2 + x2**2 - 0.25)**2, (1.0,-1.0)

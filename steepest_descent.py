@@ -2,13 +2,10 @@ import math
 import sympy as sp
 
 #Steepest Descent Method
-#verified
 #Xk+1 = xk + akpk
 #pk = -f'(x)
-#ak = 1, ak = 1/2 ak if f(xk + akpk) > f(xk)
-#Implement Armijo condition:
-    # f(xk+akpk) <= f(xk)+ c akpk^Tf'(xk)
-    # c = 1e-4 (10^-4)
+#ak = backtracking line search w/ Armijo condition
+
 
 x1, x2, x3 = sp.symbols('x1 x2 x3')
 
@@ -34,10 +31,10 @@ def steepest_descent_2(f,x,y):
     p1 = -G[1]
 
     ak = 1.0
-    f_current = f.subs([(x1,x), (x2,y)])
+    f_current = float(f.subs({x1: x, x2: y}))
     s = p0 * G[0] + p1 * G[1]
 
-    while ak > 1e-12 and f.subs([(x1,x + ak*p0), (x2,y + ak*p1)]) > f_current + c * ak * s:
+    while ak > 1e-12 and float(f.subs({x1: x + ak * p0, x2: y + ak * p1})) > f_current + c * ak * s:
         ak /= 2
 
     x = x+ak*p0
@@ -77,7 +74,7 @@ def steepest_descent_3(f,x,y,z):
     f_current = float(f.subs({x1: x, x2: y, x3: z}))
     s = p0 * G[0] + p1 * G[1] + p2 * G[2]
     
-    # Backtracking line search: shrink step size until function value decreases
+    # Backtracking line search w/ Armijo condition
     while ak > 1e-12 and float(f.subs({x1: x + ak * p0, x2: y + ak * p1, x3: z + ak * p2})) > f_current + c * ak * s:
         ak /= 2.0
         
@@ -104,7 +101,7 @@ def norm3(f,x,y,z):
 #functions dictionary with function as key and initial guess as value
 
 #functions w/ 2 variables
-#for final test c = 1, 10, 100
+#Problems 2,3,4
 functions_2 = { 
                 x1**2 + 2*x2**2 - 2*x1*x2 - 2*x2 : (0.0,0.0),
                 100*(x2 - x1**2)**2 + (1 - x1)**2 : (-1.2,1.0),
@@ -112,6 +109,7 @@ functions_2 = {
 }
 
 #functions w/ 3 variables
+#problem 1
 functions_3 = {
                 x1**2 + x2**2 + x3**2 : (1.0,1.0,1.0)
 }
@@ -157,6 +155,7 @@ for function in functions_2:
 
 
 #variable function C = 1,10,100
+#Problem #5
 prob += 1
 for C in [1, 10, 100]:
     f, (x, y) = (x1-1)**2 + (x2-1)**2 + C*(x1**2 + x2**2 - 0.25)**2, (1.0,-1.0)

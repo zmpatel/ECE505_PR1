@@ -8,7 +8,6 @@ import sympy as sp
 #rk = b - A * xk
 #beta = (rk^T * rk) / (rk-1^T * rk-1)
 
-
 x1, x2, x3 = sp.symbols('x1 x2 x3')
 
 #Error & Iteration values
@@ -43,16 +42,16 @@ def conjugate_grad_2(f,x,y,pk):
     while ak > 1e-12 and float(f.subs({x1: x + ak * p0, x2: y + ak * p1})) > f_current + c * ak * s:
         ak /= 2.0
 
-    # # Update position: x_{k+1} = x_k + ak * pk
+    # Update position: x_{k+1} = x_k + ak * pk
     x_new, y_new = x + ak * p0, y + ak * p1
 
-    # # New residual: r_{k+1} = -f'(x_{k+1})
+    # New residual: r_{k+1} = -f'(x_{k+1})
     rk_next = -derivative(f,x_new,y_new)
 
-    # # Beta: (r_{k+1}^T * r_{k+1}) / (rk^T * rk)
+    # Beta: (r_{k+1}^T * r_{k+1}) / (rk^T * rk)
     beta = (rk_next.T * rk_next)[0] / (rk.T * rk)[0]
 
-    # # Update search direction: p_{k+1} = r_{k+1} + beta * pk
+    # Update search direction: p_{k+1} = r_{k+1} + beta * pk
     p0 = rk_next[0] + beta * p0
     p1 = rk_next[1] + beta * p1
     pk = sp.Matrix([p0, p1])
@@ -63,8 +62,7 @@ def conjugate_grad_2(f,x,y,pk):
     print(f"Step Size: ak = {ak:.4f}")
     
     return x_new, y_new, pk
-
-    
+ 
 #calculate ||f'(x)|| / (1+|f(x)|)
 def norm2(f,x,y):
     G = derivative(f,x,y)
