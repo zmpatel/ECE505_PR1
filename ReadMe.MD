@@ -1,6 +1,6 @@
 Illinois Institute of Technology
+
 ECE 505 Project 1
-Zubeda Patel A20532401
 
 This repository contains 8 files.
 Two files per method, one contains the algorithm and the other the results :
