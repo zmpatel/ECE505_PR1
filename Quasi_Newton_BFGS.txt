@@ -1,0 +1,480 @@
+-------------------------PROBLEM 1-------------------------
+
+initial guess: x = 1.0000, y = 1.0000, z = 1.0000
+
+Descent Direction: p = (-2.0000, -2.0000, -2.0000)
+Step Size: ak = 0.5000
+iteration 1: x = 0.0000, y = 0.0000, z = 0.0000, Bk = Matrix([[1.333, 0.3333, 0.3333], [0.3333, 1.333, 0.3333], [0.3333, 0.3333, 1.333]])
+
+final: x = 0.0000, y = 0.0000, z = 0.0000
+
+-------------------------PROBLEM 2-------------------------
+
+initial guess: x = 0.0000, y = 0.0000
+
+Descent Direction: p = (0.0000, 2.0000)
+Step Size: ak = 0.2500
+iteration 1: x = 0.0000, y = 0.5000, Bk = Matrix([[2.000, -2.000], [-2.000, 4.000]])
+
+Descent Direction: p = (1.0000, 0.5000)
+Step Size: ak = 1.0000
+iteration 2: x = 1.0000, y = 1.0000, Bk = Matrix([[2.000, -2.000], [-2.000, 4.000]])
+
+final: x = 1.0000, y = 1.0000
+-------------------------PROBLEM 3-------------------------
+
+initial guess: x = -1.2000, y = 1.0000
+
+Descent Direction: p = (215.6000, 88.0000)
+Step Size: ak = 0.0010
+iteration 1: x = -0.9895, y = 1.0859, Bk = Matrix([[1026., 441.5], [441.5, 191.2]])
+
+Descent Direction: p = (1.7369, -4.1228)
+Step Size: ak = 0.1250
+iteration 2: x = -0.7723, y = 0.5706, Bk = Matrix([[1828., 866.9], [866.9, 416.8]])
+
+Descent Direction: p = (0.0311, -0.0522)
+Step Size: ak = 1.0000
+iteration 3: x = -0.7413, y = 0.5184, Bk = Matrix([[389.3, 253.7], [253.7, 170.8]])
+
+Descent Direction: p = (0.2781, -0.3767)
+Step Size: ak = 1.0000
+iteration 4: x = -0.4632, y = 0.1417, Bk = Matrix([[260.4, 202.1], [202.1, 171.4]])
+
+Descent Direction: p = (-0.0344, 0.1256)
+Step Size: ak = 1.0000
+iteration 5: x = -0.4976, y = 0.2673, Bk = Matrix([[221.3, 198.7], [198.7, 201.8]])
+
+Descent Direction: p = (0.1156, -0.1334)
+Step Size: ak = 1.0000
+iteration 6: x = -0.3820, y = 0.1339, Bk = Matrix([[366.5, 359.1], [359.1, 358.8]])
+
+Descent Direction: p = (0.3089, -0.3025)
+Step Size: ak = 0.2500
+iteration 7: x = -0.3048, y = 0.0583, Bk = Matrix([[365.4, 402.6], [402.6, 470.9]])
+
+Descent Direction: p = (0.0431, -0.0222)
+Step Size: ak = 1.0000
+iteration 8: x = -0.2617, y = 0.0361, Bk = Matrix([[63.21, 81.50], [81.50, 138.2]])
+
+Descent Direction: p = (0.1383, -0.0348)
+Step Size: ak = 1.0000
+iteration 9: x = -0.1233, y = 0.0014, Bk = Matrix([[35.56, 55.81], [55.81, 115.8]])
+
+Descent Direction: p = (0.1844, -0.0650)
+Step Size: ak = 0.5000
+iteration 10: x = -0.0312, y = -0.0311, Bk = Matrix([[13.07, 22.69], [22.69, 176.7]])
+
+Descent Direction: p = (0.1612, 0.0156)
+Step Size: ak = 1.0000
+iteration 11: x = 0.1301, y = -0.0155, Bk = Matrix([[15.86, -9.488], [-9.488, 93.84]])
+
+Descent Direction: p = (0.0476, 0.0739)
+Step Size: ak = 1.0000
+iteration 12: x = 0.1776, y = 0.0584, Bk = Matrix([[33.11, -68.66], [-68.66, 204.6]])
+
+Descent Direction: p = (0.1739, 0.0321)
+Step Size: ak = 1.0000
+iteration 13: x = 0.3516, y = 0.0905, Bk = Matrix([[63.21, -127.2], [-127.2, 315.8]])
+
+Descent Direction: p = (-0.0577, -0.0023)
+Step Size: ak = 1.0000
+iteration 14: x = 0.2939, y = 0.0882, Bk = Matrix([[91.65, -131.1], [-131.1, 250.2]])
+
+Descent Direction: p = (0.0625, 0.0313)
+Step Size: ak = 1.0000
+iteration 15: x = 0.3564, y = 0.1195, Bk = Matrix([[129.4, -213.4], [-213.4, 366.6]])
+
+Descent Direction: p = (0.2103, 0.1265)
+Step Size: ak = 0.5000
+iteration 16: x = 0.4616, y = 0.1828, Bk = Matrix([[236.0, -317.6], [-317.6, 456.0]])
+
+Descent Direction: p = (-0.0200, -0.0006)
+Step Size: ak = 1.0000
+iteration 17: x = 0.4416, y = 0.1822, Bk = Matrix([[173.8, -181.2], [-181.2, 218.1]])
+
+Descent Direction: p = (0.0422, 0.0469)
+Step Size: ak = 1.0000
+iteration 18: x = 0.4838, y = 0.2290, Bk = Matrix([[221.3, -225.0], [-225.0, 236.0]])
+
+Descent Direction: p = (0.1535, 0.1507)
+Step Size: ak = 1.0000
+iteration 19: x = 0.6373, y = 0.3797, Bk = Matrix([[349.7, -315.9], [-315.9, 293.4]])
+
+Descent Direction: p = (-0.0338, -0.0184)
+Step Size: ak = 1.0000
+iteration 20: x = 0.6035, y = 0.3613, Bk = Matrix([[320.3, -256.4], [-256.4, 215.1]])
+
+Descent Direction: p = (0.0533, 0.0662)
+Step Size: ak = 1.0000
+iteration 21: x = 0.6568, y = 0.4275, Bk = Matrix([[338.6, -266.2], [-266.2, 211.4]])
+
+Descent Direction: p = (0.1924, 0.2460)
+Step Size: ak = 0.5000
+iteration 22: x = 0.7530, y = 0.5505, Bk = Matrix([[533.1, -383.3], [-383.3, 279.3]])
+
+Descent Direction: p = (0.0075, 0.0222)
+Step Size: ak = 1.0000
+iteration 23: x = 0.7605, y = 0.5727, Bk = Matrix([[462.2, -301.9], [-301.9, 199.7]])
+
+Descent Direction: p = (0.0796, 0.1260)
+Step Size: ak = 1.0000
+iteration 24: x = 0.8401, y = 0.6987, Bk = Matrix([[446.7, -275.8], [-275.8, 172.0]])
+
+Descent Direction: p = (0.0463, 0.0825)
+Step Size: ak = 1.0000
+iteration 25: x = 0.8864, y = 0.7812, Bk = Matrix([[291.7, -171.9], [-171.9, 102.7]])
+
+Descent Direction: p = (0.0367, 0.0703)
+Step Size: ak = 1.0000
+iteration 26: x = 0.9231, y = 0.8514, Bk = Matrix([[384.4, -219.2], [-219.2, 125.5]])
+
+Descent Direction: p = (0.0842, 0.1480)
+Step Size: ak = 0.5000
+iteration 27: x = 0.9652, y = 0.9254, Bk = Matrix([[793.5, -421.5], [-421.5, 225.0]])
+
+Descent Direction: p = (0.0001, 0.0057)
+Step Size: ak = 1.0000
+iteration 28: x = 0.9653, y = 0.9311, Bk = Matrix([[749.1, -386.1], [-386.1, 200.0]])
+
+Descent Direction: p = (0.0187, 0.0367)
+Step Size: ak = 1.0000
+iteration 29: x = 0.9840, y = 0.9679, Bk = Matrix([[731.7, -374.4], [-374.4, 192.1]])
+
+Descent Direction: p = (0.0139, 0.0275)
+Step Size: ak = 1.0000
+iteration 30: x = 0.9979, y = 0.9953, Bk = Matrix([[718.4, -361.3], [-361.3, 182.2]])
+
+Descent Direction: p = (0.0014, 0.0033)
+Step Size: ak = 1.0000
+iteration 31: x = 0.9993, y = 0.9986, Bk = Matrix([[795.1, -397.4], [-397.4, 199.1]])
+
+Descent Direction: p = (0.0007, 0.0014)
+Step Size: ak = 1.0000
+iteration 32: x = 1.0000, y = 1.0000, Bk = Matrix([[813.6, -406.1], [-406.1, 203.2]])
+
+Descent Direction: p = (-0.0000, -0.0000)
+Step Size: ak = 1.0000
+iteration 33: x = 1.0000, y = 1.0000, Bk = Matrix([[803.4, -400.8], [-400.8, 200.4]])
+
+Descent Direction: p = (0.0000, 0.0000)
+Step Size: ak = 1.0000
+iteration 34: x = 1.0000, y = 1.0000, Bk = Matrix([[802.4, -400.2], [-400.2, 200.1]])
+
+Descent Direction: p = (0.0000, 0.0000)
+Step Size: ak = 1.0000
+iteration 35: x = 1.0000, y = 1.0000, Bk = Matrix([[802.5, -400.2], [-400.2, 200.1]])
+
+final: x = 1.0000, y = 1.0000
+-------------------------PROBLEM 4-------------------------
+
+initial guess: x = 2.0000, y = -2.0000
+
+Descent Direction: p = (0.0000, 4.0000)
+Step Size: ak = 0.2500
+iteration 1: x = 2.0000, y = -1.0000, Bk = Matrix([[3.667, 4.000], [4.000, 6.000]])
+
+Descent Direction: p = (-2.6667, 1.4444)
+Step Size: ak = 1.0000
+iteration 2: x = -0.6667, y = 0.4444, Bk = Matrix([[3.404, 3.484], [3.484, 5.632]])
+
+Descent Direction: p = (0.4538, -0.4307)
+Step Size: ak = 1.0000
+iteration 3: x = -0.2129, y = 0.0137, Bk = Matrix([[3.399, 3.552], [3.552, 5.714]])
+
+Descent Direction: p = (0.0244, -0.0144)
+Step Size: ak = 1.0000
+iteration 4: x = -0.1885, y = -0.0007, Bk = Matrix([[2.035, 3.128], [3.128, 6.975]])
+
+Descent Direction: p = (0.0226, -0.0061)
+Step Size: ak = 1.0000
+iteration 5: x = -0.1659, y = -0.0068, Bk = Matrix([[0.6019, 1.173], [1.173, 5.303]])
+
+Descent Direction: p = (0.0381, -0.0020)
+Step Size: ak = 1.0000
+iteration 6: x = -0.1278, y = -0.0087, Bk = Matrix([[0.2922, 0.3662], [0.3662, 3.785]])
+
+Descent Direction: p = (0.0292, 0.0045)
+Step Size: ak = 1.0000
+iteration 7: x = -0.0986, y = -0.0043, Bk = Matrix([[0.1900, 0.06250], [0.06250, 2.894]])
+
+Descent Direction: p = (0.0216, 0.0040)
+Step Size: ak = 1.0000
+iteration 8: x = -0.0770, y = -0.0003, Bk = Matrix([[0.1252, -0.04950], [-0.04950, 2.897]])
+
+Descent Direction: p = (0.0152, 0.0011)
+Step Size: ak = 1.0000
+iteration 9: x = -0.0618, y = 0.0008, Bk = Matrix([[0.06383, -0.02869], [-0.02869, 3.259]])
+
+Descent Direction: p = (0.0142, -0.0001)
+Step Size: ak = 1.0000
+iteration 10: x = -0.0476, y = 0.0007, Bk = Matrix([[0.03519, 0.04301], [0.04301, 3.234]])
+
+Descent Direction: p = (0.0123, -0.0005)
+Step Size: ak = 1.0000
+iteration 11: x = -0.0353, y = 0.0002, Bk = Matrix([[0.02209, 0.06632], [0.06632, 3.203]])
+
+Descent Direction: p = (0.0086, -0.0003)
+Step Size: ak = 1.0000
+iteration 12: x = -0.0267, y = -0.0000, Bk = Matrix([[0.01287, 0.05408], [0.05408, 3.357]])
+
+Descent Direction: p = (0.0062, -0.0001)
+Step Size: ak = 1.0000
+iteration 13: x = -0.0205, y = -0.0001, Bk = Matrix([[0.006863, 0.01861], [0.01861, 3.329]])
+
+Descent Direction: p = (0.0050, 0.0000)
+Step Size: ak = 1.0000
+iteration 14: x = -0.0155, y = -0.0001, Bk = Matrix([[0.004017, -0.004623], [-0.004623, 3.158]])
+
+Descent Direction: p = (0.0038, 0.0000)
+Step Size: ak = 1.0000
+iteration 15: x = -0.0117, y = -0.0000, Bk = Matrix([[0.002408, -0.01140], [-0.01140, 3.174]])
+
+Descent Direction: p = (0.0028, 0.0000)
+Step Size: ak = 1.0000
+iteration 16: x = -0.0090, y = 0.0000, Bk = Matrix([[0.001342, -0.007009], [-0.007009, 3.285]])
+
+Descent Direction: p = (0.0021, 0.0000)
+Step Size: ak = 1.0000
+iteration 17: x = -0.0068, y = 0.0000, Bk = Matrix([[0.0007488, 0.0005921], [0.0005921, 3.254]])
+
+Descent Direction: p = (0.0017, -0.0000)
+Step Size: ak = 1.0000
+iteration 18: x = -0.0051, y = 0.0000, Bk = Matrix([[0.0004418, 0.004219], [0.004219, 3.211]])
+
+Descent Direction: p = (0.0013, -0.0000)
+Step Size: ak = 1.0000
+iteration 19: x = -0.0039, y = -0.0000, Bk = Matrix([[0.0002551, 0.003924], [0.003924, 3.272]])
+
+Descent Direction: p = (0.0009, -0.0000)
+Step Size: ak = 1.0000
+iteration 20: x = -0.0029, y = -0.0000, Bk = Matrix([[0.0001419, 0.001442], [0.001442, 3.295]])
+
+Descent Direction: p = (0.0007, 0.0000)
+Step Size: ak = 1.0000
+iteration 21: x = -0.0022, y = -0.0000, Bk = Matrix([[8.135e-5, -0.0005903], [-0.0005903, 3.239]])
+
+Descent Direction: p = (0.0005, 0.0000)
+Step Size: ak = 1.0000
+iteration 22: x = -0.0017, y = -0.0000, Bk = Matrix([[4.744e-5, -0.001215], [-0.001215, 3.241]])
+
+Descent Direction: p = (0.0004, 0.0000)
+Step Size: ak = 1.0000
+iteration 23: x = -0.0013, y = 0.0000, Bk = Matrix([[2.685e-5, -0.0007912], [-0.0007912, 3.288]])
+
+Descent Direction: p = (0.0003, 0.0000)
+Step Size: ak = 1.0000
+iteration 24: x = -0.0010, y = 0.0000, Bk = Matrix([[1.513e-5, -5.952e-5], [-5.952e-5, 3.276]])
+
+Descent Direction: p = (0.0002, -0.0000)
+Step Size: ak = 1.0000
+iteration 25: x = -0.0007, y = 0.0000, Bk = Matrix([[8.748e-6, 0.0003478], [0.0003478, 3.250]])
+
+Descent Direction: p = (0.0002, -0.0000)
+Step Size: ak = 1.0000
+iteration 26: x = -0.0005, y = 0.0000, Bk = Matrix([[5.025e-6, 0.0003578], [0.0003578, 3.275]])
+
+final: x = -0.0005, y = 0.0000
+-------------------------PROBLEM 5-------------------------
+
+C = 1
+
+initial guess: x = 1.0000, y = -1.0000
+
+function: (x1 - 1)**2 + (x2 - 1)**2 + (x1**2 + x2**2 - 0.25)**2
+
+Descent Direction: p = (-7.0000, 11.0000)
+Step Size: ak = 0.1250
+iteration 1: x = 0.1250, y = 0.3750, Bk = Matrix([[4.413, -3.590], [-3.590, 4.704]])
+
+Descent Direction: p = (1.7079, 1.5989)
+Step Size: ak = 0.2500
+iteration 2: x = 0.5520, y = 0.7747, Bk = Matrix([[6.318, -0.8784], [-0.8784, 8.367]])
+
+Descent Direction: p = (-0.1149, -0.2008)
+Step Size: ak = 1.0000
+iteration 3: x = 0.4370, y = 0.5740, Bk = Matrix([[8.408, 1.179], [1.179, 8.341]])
+
+Descent Direction: p = (0.0753, 0.0171)
+Step Size: ak = 1.0000
+iteration 4: x = 0.5123, y = 0.5910, Bk = Matrix([[5.240, 1.452], [1.452, 9.331]])
+
+Descent Direction: p = (0.0478, -0.0115)
+Step Size: ak = 1.0000
+iteration 5: x = 0.5601, y = 0.5796, Bk = Matrix([[6.004, 3.266], [3.266, 9.415]])
+
+Descent Direction: p = (0.0029, -0.0101)
+Step Size: ak = 1.0000
+iteration 6: x = 0.5630, y = 0.5695, Bk = Matrix([[5.838, 2.505], [2.505, 6.201]])
+
+Descent Direction: p = (0.0010, -0.0053)
+Step Size: ak = 1.0000
+iteration 7: x = 0.5641, y = 0.5642, Bk = Matrix([[5.843, 2.506], [2.506, 6.116]])
+
+Descent Direction: p = (0.0000, -0.0001)
+Step Size: ak = 1.0000
+iteration 8: x = 0.5641, y = 0.5641, Bk = Matrix([[5.843, 2.441], [2.441, 6.048]])
+
+Descent Direction: p = (-0.0000, -0.0000)
+Step Size: ak = 1.0000
+iteration 9: x = 0.5641, y = 0.5641, Bk = Matrix([[6.090, 2.548], [2.548, 6.083]])
+
+Descent Direction: p = (0.0000, 0.0000)
+Step Size: ak = 1.0000
+iteration 10: x = 0.5641, y = 0.5641, Bk = Matrix([[6.091, 2.546], [2.546, 6.081]])
+
+final: x = 0.5641, y = 0.5641
+-------------------------PROBLEM 5-------------------------
+
+C = 10
+
+initial guess: x = 1.0000, y = -1.0000
+
+function: (x1 - 1)**2 + (x2 - 1)**2 + 10*(x1**2 + x2**2 - 0.25)**2
+
+Descent Direction: p = (-70.0000, 74.0000)
+Step Size: ak = 0.0156
+iteration 1: x = -0.0938, y = 0.1562, Bk = Matrix([[32.35, -31.13], [-31.13, 31.92]])
+
+Descent Direction: p = (2.1928, 2.2340)
+Step Size: ak = 0.1250
+iteration 2: x = 0.1803, y = 0.4355, Bk = Matrix([[32.95, -34.01], [-34.01, 38.50]])
+
+Descent Direction: p = (1.1230, 1.0340)
+Step Size: ak = 0.1250
+iteration 3: x = 0.3207, y = 0.5648, Bk = Matrix([[39.44, -22.06], [-22.06, 59.74]])
+
+Descent Direction: p = (-0.0625, -0.0735)
+Step Size: ak = 1.0000
+iteration 4: x = 0.2582, y = 0.4913, Bk = Matrix([[46.18, -15.75], [-15.75, 52.71]])
+
+Descent Direction: p = (0.0205, 0.0038)
+Step Size: ak = 1.0000
+iteration 5: x = 0.2786, y = 0.4951, Bk = Matrix([[11.85, 2.645], [2.645, 66.84]])
+
+Descent Direction: p = (0.0553, -0.0086)
+Step Size: ak = 1.0000
+iteration 6: x = 0.3339, y = 0.4864, Bk = Matrix([[14.00, 18.92], [18.92, 68.90]])
+
+Descent Direction: p = (0.0300, -0.0210)
+Step Size: ak = 1.0000
+iteration 7: x = 0.3639, y = 0.4654, Bk = Matrix([[18.53, 17.35], [17.35, 29.86]])
+
+Descent Direction: p = (0.0332, -0.0452)
+Step Size: ak = 1.0000
+iteration 8: x = 0.3971, y = 0.4202, Bk = Matrix([[17.62, 13.75], [13.75, 21.55]])
+
+Descent Direction: p = (0.0035, -0.0141)
+Step Size: ak = 1.0000
+iteration 9: x = 0.4006, y = 0.4060, Bk = Matrix([[17.75, 13.14], [13.14, 18.83]])
+
+Descent Direction: p = (0.0019, -0.0032)
+Step Size: ak = 1.0000
+iteration 10: x = 0.4025, y = 0.4028, Bk = Matrix([[17.66, 12.85], [12.85, 18.00]])
+
+Descent Direction: p = (0.0001, -0.0002)
+Step Size: ak = 1.0000
+iteration 11: x = 0.4026, y = 0.4026, Bk = Matrix([[17.65, 12.83], [12.83, 17.87]])
+
+Descent Direction: p = (0.0000, -0.0000)
+Step Size: ak = 1.0000
+iteration 12: x = 0.4026, y = 0.4026, Bk = Matrix([[17.64, 12.79], [12.79, 17.83]])
+
+Descent Direction: p = (-0.0000, 0.0000)
+Step Size: ak = 1.0000
+iteration 13: x = 0.4026, y = 0.4026, Bk = Matrix([[17.94, 12.97], [12.97, 17.93]])
+
+final: x = 0.4026, y = 0.4026
+-------------------------PROBLEM 5-------------------------
+
+C = 100
+
+initial guess: x = 1.0000, y = -1.0000
+
+function: (x1 - 1)**2 + (x2 - 1)**2 + 100*(x1**2 + x2**2 - 0.25)**2
+
+Descent Direction: p = (-700.0000, 704.0000)
+Step Size: ak = 0.0020
+iteration 1: x = -0.3672, y = 0.3750, Bk = Matrix([[258.1, -257.1], [-257.1, 258.2]])
+
+Descent Direction: p = (1.9616, 1.9438)
+Step Size: ak = 0.0625
+iteration 2: x = -0.2446, y = 0.4965, Bk = Matrix([[255.8, -270.8], [-270.8, 335.9]])
+
+Descent Direction: p = (-0.0055, -0.0347)
+Step Size: ak = 1.0000
+iteration 3: x = -0.2501, y = 0.4618, Bk = Matrix([[89.90, -98.35], [-98.35, 202.6]])
+
+Descent Direction: p = (0.0780, 0.0197)
+Step Size: ak = 1.0000
+iteration 4: x = -0.1720, y = 0.4815, Bk = Matrix([[47.33, -88.59], [-88.59, 222.9]])
+
+Descent Direction: p = (0.2202, 0.0823)
+Step Size: ak = 1.0000
+iteration 5: x = 0.0481, y = 0.5638, Bk = Matrix([[34.73, -61.60], [-61.60, 332.3]])
+
+Descent Direction: p = (-0.0952, -0.0626)
+Step Size: ak = 1.0000
+iteration 6: x = -0.0470, y = 0.5012, Bk = Matrix([[36.70, -30.15], [-30.15, 289.7]])
+
+Descent Direction: p = (0.0653, 0.0079)
+Step Size: ak = 1.0000
+iteration 7: x = 0.0183, y = 0.5091, Bk = Matrix([[6.784, -22.73], [-22.73, 348.3]])
+
+Descent Direction: p = (0.3457, 0.0198)
+Step Size: ak = 0.5000
+iteration 8: x = 0.1911, y = 0.5190, Bk = Matrix([[24.58, 30.03], [30.03, 453.3]])
+
+Descent Direction: p = (-0.0862, -0.0177)
+Step Size: ak = 1.0000
+iteration 9: x = 0.1049, y = 0.5012, Bk = Matrix([[38.50, 34.35], [34.35, 350.3]])
+
+Descent Direction: p = (0.0404, -0.0081)
+Step Size: ak = 1.0000
+iteration 10: x = 0.1453, y = 0.4931, Bk = Matrix([[24.70, 74.04], [74.04, 326.0]])
+
+Descent Direction: p = (0.1636, -0.0427)
+Step Size: ak = 0.5000
+iteration 11: x = 0.2271, y = 0.4718, Bk = Matrix([[47.48, 110.4], [110.4, 343.8]])
+
+Descent Direction: p = (0.0398, -0.0230)
+Step Size: ak = 1.0000
+iteration 12: x = 0.2669, y = 0.4488, Bk = Matrix([[43.63, 62.31], [62.31, 131.2]])
+
+Descent Direction: p = (0.0324, -0.0380)
+Step Size: ak = 1.0000
+iteration 13: x = 0.2993, y = 0.4108, Bk = Matrix([[62.36, 88.84], [88.84, 148.7]])
+
+Descent Direction: p = (0.0556, -0.0346)
+Step Size: ak = 1.0000
+iteration 14: x = 0.3549, y = 0.3763, Bk = Matrix([[110.7, 131.9], [131.9, 177.6]])
+
+Descent Direction: p = (-0.0131, 0.0018)
+Step Size: ak = 1.0000
+iteration 15: x = 0.3419, y = 0.3781, Bk = Matrix([[104.8, 106.3], [106.3, 129.7]])
+
+Descent Direction: p = (0.0097, -0.0099)
+Step Size: ak = 1.0000
+iteration 16: x = 0.3516, y = 0.3683, Bk = Matrix([[105.1, 106.6], [106.6, 120.2]])
+
+Descent Direction: p = (0.0079, -0.0078)
+Step Size: ak = 1.0000
+iteration 17: x = 0.3595, y = 0.3605, Bk = Matrix([[106.9, 103.7], [103.7, 112.0]])
+
+Descent Direction: p = (0.0002, -0.0006)
+Step Size: ak = 1.0000
+iteration 18: x = 0.3597, y = 0.3599, Bk = Matrix([[108.2, 103.3], [103.3, 109.3]])
+
+Descent Direction: p = (0.0001, -0.0001)
+Step Size: ak = 1.0000
+iteration 19: x = 0.3598, y = 0.3598, Bk = Matrix([[107.6, 102.2], [102.2, 107.9]])
+
+Descent Direction: p = (-0.0000, 0.0000)
+Step Size: ak = 1.0000
+iteration 20: x = 0.3598, y = 0.3598, Bk = Matrix([[109.0, 103.4], [103.4, 108.9]])
+
+Descent Direction: p = (0.0000, -0.0000)
+Step Size: ak = 1.0000
+iteration 21: x = 0.3598, y = 0.3598, Bk = Matrix([[109.1, 103.5], [103.5, 109.1]])
+
+final: x = 0.3598, y = 0.3598

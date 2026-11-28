@@ -1,0 +1,313 @@
+-------------------------PROBLEM 1-------------------------
+
+initial guess: x = 1.0000, y = 1.0000, z = 1.0000
+
+function: x1**2 + x2**2 + x3**2
+
+search direction: [-1.0000, -1.0000, -1.0000]
+step length: ak = 1.0000
+
+iteration 1: x = 0.0000, y = 0.0000, z = 0.0000
+
+final: x = 0.0000, y = 0.0000, z = 0.0000
+
+-------------------------PROBLEM 2-------------------------
+
+function: x1**2 - 2*x1*x2 + 2*x2**2 - 2*x2
+
+initial guess: x = 0.0000, y = 0.0000
+
+Descent direction: [1.0000, 1.0000]
+step length: ak = 1.0000
+
+iteration 1: x = 1.0000, y = 1.0000
+
+final: x = 1.0000, y = 1.0000
+-------------------------PROBLEM 3-------------------------
+
+function: (1 - x1)**2 + 100*(-x1**2 + x2)**2
+
+initial guess: x = -1.2000, y = 1.0000
+
+Descent direction: [0.0247, 0.3807]
+step length: ak = 1.0000
+
+iteration 1: x = -1.1753, y = 1.3807
+
+Descent direction: [1.9384, -4.5557]
+step length: ak = 0.1250
+
+iteration 2: x = -0.9330, y = 0.8112
+
+Descent direction: [0.1504, -0.2215]
+step length: ak = 1.0000
+
+iteration 3: x = -0.7825, y = 0.5897
+
+Descent direction: [0.3225, -0.4822]
+step length: ak = 1.0000
+
+iteration 4: x = -0.4600, y = 0.1076
+
+Descent direction: [0.0670, 0.0424]
+step length: ak = 1.0000
+
+iteration 5: x = -0.3930, y = 0.1500
+
+Descent direction: [0.7345, -0.5729]
+step length: ak = 0.2500
+
+iteration 6: x = -0.2094, y = 0.0068
+
+Descent direction: [0.1437, -0.0231]
+step length: ak = 1.0000
+
+iteration 7: x = -0.0657, y = -0.0163
+
+Descent direction: [0.2078, -0.0067]
+step length: ak = 1.0000
+
+iteration 8: x = 0.1420, y = -0.0230
+
+Descent direction: [0.0891, 0.0685]
+step length: ak = 1.0000
+
+iteration 9: x = 0.2311, y = 0.0455
+
+Descent direction: [0.2973, 0.1453]
+step length: ak = 0.5000
+
+iteration 10: x = 0.3797, y = 0.1181
+
+Descent direction: [0.0999, 0.1019]
+step length: ak = 1.0000
+
+iteration 11: x = 0.4796, y = 0.2200
+
+Descent direction: [0.1738, 0.1767]
+step length: ak = 1.0000
+
+iteration 12: x = 0.6534, y = 0.3967
+
+Descent direction: [0.0492, 0.0945]
+step length: ak = 1.0000
+
+iteration 13: x = 0.7026, y = 0.4913
+
+Descent direction: [0.2003, 0.2839]
+step length: ak = 0.5000
+
+iteration 14: x = 0.8028, y = 0.6332
+
+Descent direction: [0.0607, 0.1087]
+step length: ak = 1.0000
+
+iteration 15: x = 0.8635, y = 0.7419
+
+Descent direction: [0.0786, 0.1394]
+step length: ak = 1.0000
+
+iteration 16: x = 0.9421, y = 0.8813
+
+Descent direction: [0.0259, 0.0550]
+step length: ak = 1.0000
+
+iteration 17: x = 0.9680, y = 0.9363
+
+Descent direction: [0.0282, 0.0553]
+step length: ak = 1.0000
+
+iteration 18: x = 0.9962, y = 0.9916
+
+Descent direction: [0.0033, 0.0073]
+step length: ak = 1.0000
+
+iteration 19: x = 0.9995, y = 0.9989
+
+Descent direction: [0.0005, 0.0010]
+step length: ak = 1.0000
+
+iteration 20: x = 1.0000, y = 1.0000
+
+Descent direction: [0.0000, 0.0000]
+step length: ak = 1.0000
+
+iteration 21: x = 1.0000, y = 1.0000
+
+final: x = 1.0000, y = 1.0000
+-------------------------PROBLEM 4-------------------------
+
+function: x2**2 + (x1 + x2)**4
+
+initial guess: x = 2.0000, y = -2.0000
+
+error: Hessian is singular; Newton step fails.
+
+final: x = 2.0000, y = -2.0000
+-------------------------PROBLEM 5-------------------------
+
+C = 1
+
+initial guess: x = 1.0000, y = -1.0000
+
+function: (x1 - 1)**2 + (x2 - 1)**2 + (x1**2 + x2**2 - 0.25)**2
+
+Descent direction: [-0.1378, 0.5822]
+step length: ak = 1.0000
+
+iteration 1: x = 0.8622, y = -0.4178
+
+Descent direction: [-0.0164, 0.6435]
+step length: ak = 1.0000
+
+iteration 2: x = 0.8458, y = 0.2257
+
+Descent direction: [-0.1951, 0.3086]
+step length: ak = 1.0000
+
+iteration 3: x = 0.6507, y = 0.5343
+
+Descent direction: [-0.0795, 0.0280]
+step length: ak = 1.0000
+
+iteration 4: x = 0.5713, y = 0.5623
+
+Descent direction: [-0.0071, 0.0017]
+step length: ak = 1.0000
+
+iteration 5: x = 0.5641, y = 0.5641
+
+Descent direction: [-0.0001, 0.0000]
+step length: ak = 1.0000
+
+iteration 6: x = 0.5641, y = 0.5641
+
+final: x = 0.5641, y = 0.5641
+-------------------------PROBLEM 5-------------------------
+
+C = 10
+
+initial guess: x = 1.0000, y = -1.0000
+
+function: (x1 - 1)**2 + (x2 - 1)**2 + 10*(x1**2 + x2**2 - 0.25)**2
+
+Descent direction: [-0.2826, 0.3381]
+step length: ak = 1.0000
+
+iteration 1: x = 0.7174, y = -0.6619
+
+Descent direction: [-0.1387, 0.2557]
+step length: ak = 1.0000
+
+iteration 2: x = 0.5787, y = -0.4062
+
+Descent direction: [0.0076, 0.2784]
+step length: ak = 1.0000
+
+iteration 3: x = 0.5863, y = -0.1278
+
+Descent direction: [0.0150, 0.3772]
+step length: ak = 1.0000
+
+iteration 4: x = 0.6012, y = 0.2495
+
+Descent direction: [-0.1155, 0.0828]
+step length: ak = 1.0000
+
+iteration 5: x = 0.4857, y = 0.3323
+
+Descent direction: [-0.0666, 0.0623]
+step length: ak = 1.0000
+
+iteration 6: x = 0.4191, y = 0.3946
+
+Descent direction: [-0.0156, 0.0075]
+step length: ak = 1.0000
+
+iteration 7: x = 0.4035, y = 0.4021
+
+Descent direction: [-0.0009, 0.0005]
+step length: ak = 1.0000
+
+iteration 8: x = 0.4026, y = 0.4026
+
+Descent direction: [-0.0000, 0.0000]
+step length: ak = 1.0000
+
+iteration 9: x = 0.4026, y = 0.4026
+
+final: x = 0.4026, y = 0.4026
+-------------------------PROBLEM 5-------------------------
+
+C = 100
+
+initial guess: x = 1.0000, y = -1.0000
+
+function: (x1 - 1)**2 + (x2 - 1)**2 + 100*(x1**2 + x2**2 - 0.25)**2
+
+Descent direction: [-0.3021, 0.3078]
+step length: ak = 1.0000
+
+iteration 1: x = 0.6979, y = -0.6922
+
+Descent direction: [-0.1828, 0.1951]
+step length: ak = 1.0000
+
+iteration 2: x = 0.5151, y = -0.4971
+
+Descent direction: [-0.0882, 0.1218]
+step length: ak = 1.0000
+
+iteration 3: x = 0.4269, y = -0.3753
+
+Descent direction: [0.0141, 0.1079]
+step length: ak = 1.0000
+
+iteration 4: x = 0.4410, y = -0.2674
+
+Descent direction: [0.1556, 0.2885]
+step length: ak = 0.5000
+
+iteration 5: x = 0.5188, y = -0.1231
+
+Descent direction: [0.0077, 0.1555]
+step length: ak = 1.0000
+
+iteration 6: x = 0.5265, y = 0.0324
+
+Descent direction: [-0.0294, 0.1391]
+step length: ak = 1.0000
+
+iteration 7: x = 0.4972, y = 0.1715
+
+Descent direction: [-0.0485, 0.0870]
+step length: ak = 1.0000
+
+iteration 8: x = 0.4486, y = 0.2585
+
+Descent direction: [-0.0477, 0.0644]
+step length: ak = 1.0000
+
+iteration 9: x = 0.4009, y = 0.3229
+
+Descent direction: [-0.0284, 0.0258]
+step length: ak = 1.0000
+
+iteration 10: x = 0.3726, y = 0.3487
+
+Descent direction: [-0.0115, 0.0102]
+step length: ak = 1.0000
+
+iteration 11: x = 0.3611, y = 0.3588
+
+Descent direction: [-0.0013, 0.0010]
+step length: ak = 1.0000
+
+iteration 12: x = 0.3598, y = 0.3598
+
+Descent direction: [-0.0000, 0.0000]
+step length: ak = 1.0000
+
+iteration 13: x = 0.3598, y = 0.3598
+
+final: x = 0.3598, y = 0.3598

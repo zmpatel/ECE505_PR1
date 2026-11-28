@@ -1,0 +1,1634 @@
+-------------------------PROBLEM 1-------------------------
+
+initial guess: x = 1.0000, y = 1.0000, z = 1.0000
+
+Descent Direction: p = (0.0000, 0.0000, 0.0000)
+Step Size: ak = 0.5000
+iteration 1: x = 0.0000, y = 0.0000, z = 0.0000
+
+final: x = 0.0000, y = 0.0000, z = 0.0000
+
+-------------------------PROBLEM 2-------------------------
+
+initial guess: x = 0.0000, y = 0.0000
+
+Descent Direction: p = (1.0000, 0.5000)
+Step Size: ak = 0.2500
+iteration 1: x = 0.0000, y = 0.5000
+
+Descent Direction: p = (0.0000, 0.0000)
+Step Size: ak = 1.0000
+iteration 2: x = 1.0000, y = 1.0000
+
+final: x = 1.0000, y = 1.0000
+-------------------------PROBLEM 3-------------------------
+
+initial guess: x = -1.2000, y = 1.0000
+
+Descent Direction: p = (-30.6762, -18.2567)
+Step Size: ak = 0.0010
+iteration 1: x = -0.9895, y = 1.0859
+
+Descent Direction: p = (13.4924, 3.0556)
+Step Size: ak = 0.0020
+iteration 2: x = -1.0494, y = 1.0503
+
+Descent Direction: p = (0.1494, -1.9222)
+Step Size: ak = 0.0020
+iteration 3: x = -1.0230, y = 1.0562
+
+Descent Direction: p = (6.3541, -13.6604)
+Step Size: ak = 0.0078
+iteration 4: x = -1.0218, y = 1.0412
+
+Descent Direction: p = (198.5368, -361.3736)
+Step Size: ak = 0.0312
+iteration 5: x = -0.8233, y = 0.6143
+
+Descent Direction: p = (267.2040, -423.1894)
+Step Size: ak = 0.0002
+iteration 6: x = -0.7748, y = 0.5261
+
+Descent Direction: p = (359.3665, -505.7446)
+Step Size: ak = 0.0005
+iteration 7: x = -0.6443, y = 0.3195
+
+Descent Direction: p = (404.0353, -508.7822)
+Step Size: ak = 0.0001
+iteration 8: x = -0.6005, y = 0.2577
+
+Descent Direction: p = (428.3912, -483.9010)
+Step Size: ak = 0.0001
+iteration 9: x = -0.5512, y = 0.1956
+
+Descent Direction: p = (438.1010, -443.7139)
+Step Size: ak = 0.0001
+iteration 10: x = -0.4989, y = 0.1366
+
+Descent Direction: p = (439.7926, -398.3848)
+Step Size: ak = 0.0001
+iteration 11: x = -0.4454, y = 0.0824
+
+Descent Direction: p = (438.6890, -353.9521)
+Step Size: ak = 0.0001
+iteration 12: x = -0.3917, y = 0.0338
+
+Descent Direction: p = (438.4864, -313.3667)
+Step Size: ak = 0.0001
+iteration 13: x = -0.3381, y = -0.0094
+
+Descent Direction: p = (442.0516, -277.8693)
+Step Size: ak = 0.0001
+iteration 14: x = -0.2846, y = -0.0477
+
+Descent Direction: p = (450.7959, -247.0928)
+Step Size: ak = 0.0001
+iteration 15: x = -0.2576, y = -0.0646
+
+Descent Direction: p = (452.2805, -213.3814)
+Step Size: ak = 0.0001
+iteration 16: x = -0.2026, y = -0.0948
+
+Descent Direction: p = (462.0324, -184.5867)
+Step Size: ak = 0.0000
+iteration 17: x = -0.1888, y = -0.1013
+
+Descent Direction: p = (462.8938, -152.7577)
+Step Size: ak = 0.0001
+iteration 18: x = -0.1324, y = -0.1239
+
+Descent Direction: p = (471.4131, -124.0998)
+Step Size: ak = 0.0000
+iteration 19: x = -0.1253, y = -0.1262
+
+Descent Direction: p = (475.3290, -94.3408)
+Step Size: ak = 0.0001
+iteration 20: x = -0.0678, y = -0.1413
+
+Descent Direction: p = (481.5013, -65.1535)
+Step Size: ak = 0.0000
+iteration 21: x = -0.0605, y = -0.1428
+
+Descent Direction: p = (484.4290, -35.4776)
+Step Size: ak = 0.0001
+iteration 22: x = -0.0312, y = -0.1467
+
+Descent Direction: p = (488.3661, -5.8290)
+Step Size: ak = 0.0001
+iteration 23: x = -0.0016, y = -0.1489
+
+Descent Direction: p = (493.7710, 24.1228)
+Step Size: ak = 0.0001
+iteration 24: x = 0.0282, y = -0.1493
+
+Descent Direction: p = (501.0853, 54.8012)
+Step Size: ak = 0.0001
+iteration 25: x = 0.0584, y = -0.1478
+
+Descent Direction: p = (510.7765, 86.7273)
+Step Size: ak = 0.0001
+iteration 26: x = 0.0889, y = -0.1445
+
+Descent Direction: p = (523.3906, 120.5408)
+Step Size: ak = 0.0001
+iteration 27: x = 0.1201, y = -0.1392
+
+Descent Direction: p = (539.6223, 157.0438)
+Step Size: ak = 0.0001
+iteration 28: x = 0.1521, y = -0.1318
+
+Descent Direction: p = (560.4216, 197.2798)
+Step Size: ak = 0.0001
+iteration 29: x = 0.1850, y = -0.1222
+
+Descent Direction: p = (565.8491, 234.5059)
+Step Size: ak = 0.0000
+iteration 30: x = 0.2021, y = -0.1162
+
+Descent Direction: p = (586.8028, 280.3265)
+Step Size: ak = 0.0001
+iteration 31: x = 0.2366, y = -0.1019
+
+Descent Direction: p = (613.8911, 332.6509)
+Step Size: ak = 0.0001
+iteration 32: x = 0.2725, y = -0.0848
+
+Descent Direction: p = (649.0237, 393.8278)
+Step Size: ak = 0.0001
+iteration 33: x = 0.3099, y = -0.0645
+
+Descent Direction: p = (658.4359, 443.8591)
+Step Size: ak = 0.0000
+iteration 34: x = 0.3297, y = -0.0525
+
+Descent Direction: p = (697.0091, 517.6305)
+Step Size: ak = 0.0001
+iteration 35: x = 0.3699, y = -0.0254
+
+Descent Direction: p = (706.0034, 574.8180)
+Step Size: ak = 0.0000
+iteration 36: x = 0.3912, y = -0.0096
+
+Descent Direction: p = (747.1687, 663.0929)
+Step Size: ak = 0.0001
+iteration 37: x = 0.4343, y = 0.0255
+
+Descent Direction: p = (802.1423, 771.8042)
+Step Size: ak = 0.0001
+iteration 38: x = 0.4799, y = 0.0660
+
+Descent Direction: p = (816.9704, 850.0811)
+Step Size: ak = 0.0000
+iteration 39: x = 0.5044, y = 0.0895
+
+Descent Direction: p = (879.5043, 985.5994)
+Step Size: ak = 0.0001
+iteration 40: x = 0.5542, y = 0.1414
+
+Descent Direction: p = (895.9298, 1079.5633)
+Step Size: ak = 0.0000
+iteration 41: x = 0.5811, y = 0.1715
+
+Descent Direction: p = (967.2233, 1249.0506)
+Step Size: ak = 0.0001
+iteration 42: x = 0.6357, y = 0.2374
+
+Descent Direction: p = (985.7502, 1362.9327)
+Step Size: ak = 0.0000
+iteration 43: x = 0.6653, y = 0.2755
+
+Descent Direction: p = (1067.5859, 1576.0511)
+Step Size: ak = 0.0001
+iteration 44: x = 0.7254, y = 0.3587
+
+Descent Direction: p = (1089.1790, 1715.8699)
+Step Size: ak = 0.0000
+iteration 45: x = 0.7580, y = 0.4068
+
+Descent Direction: p = (1184.9165, 1987.2065)
+Step Size: ak = 0.0001
+iteration 46: x = 0.8245, y = 0.5115
+
+Descent Direction: p = (1211.8327, 2162.8979)
+Step Size: ak = 0.0000
+iteration 47: x = 0.8607, y = 0.5722
+
+Descent Direction: p = (1218.9640, 2316.1543)
+Step Size: ak = 0.0000
+iteration 48: x = 0.8976, y = 0.6382
+
+Descent Direction: p = (1283.4642, 2593.7839)
+Step Size: ak = 0.0001
+iteration 49: x = 0.9720, y = 0.7795
+
+Descent Direction: p = (1278.8931, 2751.2675)
+Step Size: ak = 0.0000
+iteration 50: x = 1.0112, y = 0.8587
+
+Descent Direction: p = (1309.8378, 3000.0281)
+Step Size: ak = 0.0001
+iteration 51: x = 1.0893, y = 1.0266
+
+Descent Direction: p = (1358.9247, 3313.1888)
+Step Size: ak = 0.0001
+iteration 52: x = 1.1692, y = 1.2097
+
+Descent Direction: p = (1427.2794, 3702.6482)
+Step Size: ak = 0.0001
+iteration 53: x = 1.2521, y = 1.4120
+
+Descent Direction: p = (1397.6910, 3865.1181)
+Step Size: ak = 0.0000
+iteration 54: x = 1.2957, y = 1.5250
+
+Descent Direction: p = (1337.0028, 3952.2041)
+Step Size: ak = 0.0001
+iteration 55: x = 1.3810, y = 1.7609
+
+Descent Direction: p = (1224.9901, 3888.4664)
+Step Size: ak = 0.0001
+iteration 56: x = 1.4626, y = 2.0021
+
+Descent Direction: p = (1089.7291, 3737.7542)
+Step Size: ak = 0.0001
+iteration 57: x = 1.6122, y = 2.4768
+
+Descent Direction: p = (996.1403, 3714.0199)
+Step Size: ak = 0.0001
+iteration 58: x = 1.7452, y = 2.9330
+
+Descent Direction: p = (795.1978, 3265.0722)
+Step Size: ak = 0.0001
+iteration 59: x = 1.8668, y = 3.3864
+
+Descent Direction: p = (360.6183, 1718.2513)
+Step Size: ak = 0.0002
+iteration 60: x = 2.0609, y = 4.1835
+
+Descent Direction: p = (12.1380, 133.1561)
+Step Size: ak = 0.0002
+iteration 61: x = 2.1490, y = 4.6030
+
+Descent Direction: p = (2.0214, 1.3728)
+Step Size: ak = 0.0002
+iteration 62: x = 2.1519, y = 4.6355
+
+Descent Direction: p = (0.4763, -0.4569)
+Step Size: ak = 0.0002
+iteration 63: x = 2.1524, y = 4.6359
+
+Descent Direction: p = (0.0366, -1.1418)
+Step Size: ak = 0.0005
+iteration 64: x = 2.1526, y = 4.6356
+
+Descent Direction: p = (-2.5343, -13.4679)
+Step Size: ak = 0.0020
+iteration 65: x = 2.1527, y = 4.6334
+
+Descent Direction: p = (-143.4380, -650.1549)
+Step Size: ak = 0.0078
+iteration 66: x = 2.1329, y = 4.5282
+
+Descent Direction: p = (-319.0001, -1309.0168)
+Step Size: ak = 0.0002
+iteration 67: x = 2.0979, y = 4.3695
+
+Descent Direction: p = (-488.4134, -1855.5602)
+Step Size: ak = 0.0005
+iteration 68: x = 1.9421, y = 3.7303
+
+Descent Direction: p = (-549.2664, -1944.8692)
+Step Size: ak = 0.0002
+iteration 69: x = 1.8229, y = 3.2773
+
+Descent Direction: p = (-588.1640, -1949.2321)
+Step Size: ak = 0.0002
+iteration 70: x = 1.6888, y = 2.8025
+
+Descent Direction: p = (-780.9258, -2447.1294)
+Step Size: ak = 0.0002
+iteration 71: x = 1.5452, y = 2.3266
+
+Descent Direction: p = (-836.4274, -2485.7332)
+Step Size: ak = 0.0000
+iteration 72: x = 1.5214, y = 2.2519
+
+Descent Direction: p = (-846.2236, -2388.0675)
+Step Size: ak = 0.0001
+iteration 73: x = 1.4193, y = 1.9485
+
+Descent Direction: p = (-870.4773, -2336.4266)
+Step Size: ak = 0.0001
+iteration 74: x = 1.3676, y = 1.8027
+
+Descent Direction: p = (-847.3954, -2163.5729)
+Step Size: ak = 0.0001
+iteration 75: x = 1.3145, y = 1.6601
+
+Descent Direction: p = (-825.8674, -2006.0300)
+Step Size: ak = 0.0001
+iteration 76: x = 1.2110, y = 1.3960
+
+Descent Direction: p = (-850.3392, -1967.7878)
+Step Size: ak = 0.0000
+iteration 77: x = 1.1984, y = 1.3654
+
+Descent Direction: p = (-782.4977, -1722.7260)
+Step Size: ak = 0.0001
+iteration 78: x = 1.1465, y = 1.2453
+
+Descent Direction: p = (-707.7465, -1479.5146)
+Step Size: ak = 0.0001
+iteration 79: x = 1.0510, y = 1.0350
+
+Descent Direction: p = (-724.0284, -1438.8591)
+Step Size: ak = 0.0000
+iteration 80: x = 1.0402, y = 1.0124
+
+Descent Direction: p = (-640.6928, -1207.2018)
+Step Size: ak = 0.0001
+iteration 81: x = 0.9518, y = 0.8368
+
+Descent Direction: p = (-653.8824, -1169.3497)
+Step Size: ak = 0.0000
+iteration 82: x = 0.9421, y = 0.8183
+
+Descent Direction: p = (-567.4651, -959.8675)
+Step Size: ak = 0.0001
+iteration 83: x = 0.8622, y = 0.6756
+
+Descent Direction: p = (-577.6181, -924.9310)
+Step Size: ak = 0.0000
+iteration 84: x = 0.8536, y = 0.6610
+
+Descent Direction: p = (-487.2436, -735.1945)
+Step Size: ak = 0.0001
+iteration 85: x = 0.7831, y = 0.5480
+
+Descent Direction: p = (-483.2197, -686.9957)
+Step Size: ak = 0.0000
+iteration 86: x = 0.7682, y = 0.5256
+
+Descent Direction: p = (-402.2509, -535.7585)
+Step Size: ak = 0.0001
+iteration 87: x = 0.7092, y = 0.4417
+
+Descent Direction: p = (-378.8040, -471.6403)
+Step Size: ak = 0.0001
+iteration 88: x = 0.6847, y = 0.4090
+
+Descent Direction: p = (-315.8120, -365.0455)
+Step Size: ak = 0.0001
+iteration 89: x = 0.6384, y = 0.3515
+
+Descent Direction: p = (-269.5012, -287.1697)
+Step Size: ak = 0.0001
+iteration 90: x = 0.5999, y = 0.3069
+
+Descent Direction: p = (-229.4350, -223.4907)
+Step Size: ak = 0.0001
+iteration 91: x = 0.5670, y = 0.2719
+
+Descent Direction: p = (-163.9750, -143.2039)
+Step Size: ak = 0.0002
+iteration 92: x = 0.5110, y = 0.2173
+
+Descent Direction: p = (-145.0534, -112.2570)
+Step Size: ak = 0.0001
+iteration 93: x = 0.4909, y = 0.1998
+
+Descent Direction: p = (-100.5134, -66.6595)
+Step Size: ak = 0.0002
+iteration 94: x = 0.4555, y = 0.1724
+
+Descent Direction: p = (-47.4488, -24.4528)
+Step Size: ak = 0.0005
+iteration 95: x = 0.4065, y = 0.1399
+
+Descent Direction: p = (-25.5216, -8.4902)
+Step Size: ak = 0.0005
+iteration 96: x = 0.3833, y = 0.1279
+
+Descent Direction: p = (-12.8533, -1.2693)
+Step Size: ak = 0.0005
+iteration 97: x = 0.3708, y = 0.1238
+
+Descent Direction: p = (-6.1672, 1.3540)
+Step Size: ak = 0.0005
+iteration 98: x = 0.3645, y = 0.1232
+
+Descent Direction: p = (-1.1588, 1.2209)
+Step Size: ak = 0.0010
+iteration 99: x = 0.3585, y = 0.1245
+
+Descent Direction: p = (-0.3400, 1.8852)
+Step Size: ak = 0.0002
+iteration 100: x = 0.3582, y = 0.1248
+
+Descent Direction: p = (0.7882, 3.1059)
+Step Size: ak = 0.0020
+iteration 101: x = 0.3576, y = 0.1285
+
+Descent Direction: p = (3.1216, 4.8909)
+Step Size: ak = 0.0010
+iteration 102: x = 0.3584, y = 0.1315
+
+Descent Direction: p = (773.0614, 1159.1611)
+Step Size: ak = 0.2500
+iteration 103: x = 1.1388, y = 1.3542
+
+Descent Direction: p = (167.5682, 275.3406)
+Step Size: ak = 0.0001
+iteration 104: x = 1.2331, y = 1.4957
+
+Descent Direction: p = (154.8271, 280.3177)
+Step Size: ak = 0.0000
+iteration 105: x = 1.2331, y = 1.4957
+
+Descent Direction: p = (142.0860, 285.2949)
+Step Size: ak = 0.0000
+iteration 106: x = 1.2331, y = 1.4957
+
+Descent Direction: p = (129.3449, 290.2720)
+Step Size: ak = 0.0000
+iteration 107: x = 1.2331, y = 1.4957
+
+Descent Direction: p = (116.6038, 295.2492)
+Step Size: ak = 0.0000
+iteration 108: x = 1.2331, y = 1.4957
+
+Descent Direction: p = (103.8627, 300.2263)
+Step Size: ak = 0.0000
+iteration 109: x = 1.2331, y = 1.4957
+
+Descent Direction: p = (4.4255, 24.4330)
+Step Size: ak = 0.0005
+iteration 110: x = 1.2838, y = 1.6423
+
+Descent Direction: p = (-0.3066, 0.1262)
+Step Size: ak = 0.0005
+iteration 111: x = 1.2860, y = 1.6542
+
+Descent Direction: p = (-0.0888, -0.1831)
+Step Size: ak = 0.0010
+iteration 112: x = 1.2857, y = 1.6544
+
+Descent Direction: p = (-8.2433, -24.4580)
+Step Size: ak = 0.1250
+iteration 113: x = 1.2746, y = 1.6315
+
+Descent Direction: p = (-20.2159, -45.7884)
+Step Size: ak = 0.0039
+iteration 114: x = 1.2424, y = 1.5359
+
+Descent Direction: p = (0.0052, -2.1571)
+Step Size: ak = 0.0078
+iteration 115: x = 1.0845, y = 1.1782
+
+Descent Direction: p = (-1.0613, -3.2543)
+Step Size: ak = 0.0020
+iteration 116: x = 1.0845, y = 1.1740
+
+Descent Direction: p = (-2.1314, -2.8388)
+Step Size: ak = 0.0000
+iteration 117: x = 1.0845, y = 1.1740
+
+Descent Direction: p = (0.0020, -0.8612)
+Step Size: ak = 0.0020
+iteration 118: x = 1.0803, y = 1.1685
+
+Descent Direction: p = (-0.2899, -0.2199)
+Step Size: ak = 0.0020
+iteration 119: x = 1.0803, y = 1.1668
+
+Descent Direction: p = (-0.3394, -0.8156)
+Step Size: ak = 0.0039
+iteration 120: x = 1.0792, y = 1.1659
+
+Descent Direction: p = (-8.9178, -15.8565)
+Step Size: ak = 0.0625
+iteration 121: x = 1.0580, y = 1.1149
+
+Descent Direction: p = (-12.5990, -28.0773)
+Step Size: ak = 0.0039
+iteration 122: x = 1.0231, y = 1.0530
+
+Descent Direction: p = (-10.0044, -16.8718)
+Step Size: ak = 0.0039
+iteration 123: x = 0.9739, y = 0.9433
+
+Descent Direction: p = (-0.1160, 0.0388)
+Step Size: ak = 0.0020
+iteration 124: x = 0.9544, y = 0.9104
+
+Descent Direction: p = (0.0193, 0.0207)
+Step Size: ak = 0.0020
+iteration 125: x = 0.9541, y = 0.9104
+
+Descent Direction: p = (-0.0967, 0.3886)
+Step Size: ak = 0.0625
+iteration 126: x = 0.9554, y = 0.9117
+
+Descent Direction: p = (0.1296, 0.0471)
+Step Size: ak = 0.0020
+iteration 127: x = 0.9552, y = 0.9125
+
+Descent Direction: p = (0.0648, 0.2041)
+Step Size: ak = 0.0039
+iteration 128: x = 0.9557, y = 0.9127
+
+Descent Direction: p = (0.5306, 0.5192)
+Step Size: ak = 0.0156
+iteration 129: x = 0.9567, y = 0.9159
+
+Descent Direction: p = (0.6549, 1.3173)
+Step Size: ak = 0.0039
+iteration 130: x = 0.9588, y = 0.9179
+
+Descent Direction: p = (-0.0813, 0.3381)
+Step Size: ak = 0.1250
+iteration 131: x = 1.0406, y = 1.0826
+
+Descent Direction: p = (-0.0126, -0.0256)
+Step Size: ak = 0.0010
+iteration 132: x = 1.0405, y = 1.0829
+
+Descent Direction: p = (-0.4037, -1.3786)
+Step Size: ak = 1.0000
+iteration 133: x = 1.0279, y = 1.0573
+
+Descent Direction: p = (-0.6153, -1.2386)
+Step Size: ak = 0.0020
+iteration 134: x = 1.0272, y = 1.0546
+
+Descent Direction: p = (-0.2495, -0.2354)
+Step Size: ak = 0.0625
+iteration 135: x = 0.9887, y = 0.9772
+
+Descent Direction: p = (-0.0040, 0.0098)
+Step Size: ak = 0.0010
+iteration 136: x = 0.9885, y = 0.9770
+
+Descent Direction: p = (0.0083, 0.0419)
+Step Size: ak = 0.0039
+iteration 137: x = 0.9884, y = 0.9770
+
+Descent Direction: p = (0.0728, 0.1252)
+Step Size: ak = 0.0020
+iteration 138: x = 0.9885, y = 0.9771
+
+Descent Direction: p = (1.3844, 2.8184)
+Step Size: ak = 0.0312
+iteration 139: x = 0.9907, y = 0.9810
+
+Descent Direction: p = (-0.0017, 0.0643)
+Step Size: ak = 0.0078
+iteration 140: x = 1.0016, y = 1.0030
+
+Descent Direction: p = (-0.0009, -0.0010)
+Step Size: ak = 0.0010
+iteration 141: x = 1.0015, y = 1.0031
+
+Descent Direction: p = (-0.0351, -0.0556)
+Step Size: ak = 0.0312
+iteration 142: x = 1.0015, y = 1.0031
+
+Descent Direction: p = (-0.0803, -0.1581)
+Step Size: ak = 0.0010
+iteration 143: x = 1.0015, y = 1.0030
+
+Descent Direction: p = (-0.3699, -0.8098)
+Step Size: ak = 0.0156
+iteration 144: x = 1.0002, y = 1.0006
+
+Descent Direction: p = (-0.1657, -0.3073)
+Step Size: ak = 0.0020
+iteration 145: x = 0.9995, y = 0.9990
+
+Descent Direction: p = (-0.0583, -0.0820)
+Step Size: ak = 0.0010
+iteration 146: x = 0.9993, y = 0.9987
+
+Descent Direction: p = (-0.0003, -0.0051)
+Step Size: ak = 0.0010
+iteration 147: x = 0.9993, y = 0.9986
+
+Descent Direction: p = (0.0010, -0.0005)
+Step Size: ak = 0.0010
+iteration 148: x = 0.9993, y = 0.9986
+
+Descent Direction: p = (0.0005, 0.0005)
+Step Size: ak = 0.0010
+iteration 149: x = 0.9993, y = 0.9986
+
+Descent Direction: p = (0.0096, 0.0146)
+Step Size: ak = 0.0156
+iteration 150: x = 0.9993, y = 0.9986
+
+Descent Direction: p = (0.0192, 0.0391)
+Step Size: ak = 0.0010
+iteration 151: x = 0.9993, y = 0.9986
+
+Descent Direction: p = (0.1495, 0.2715)
+Step Size: ak = 0.0625
+iteration 152: x = 1.0005, y = 1.0011
+
+Descent Direction: p = (0.1042, 0.1648)
+Step Size: ak = 0.0002
+iteration 153: x = 1.0005, y = 1.0011
+
+Descent Direction: p = (0.0053, 0.0043)
+Step Size: ak = 0.0005
+iteration 154: x = 1.0006, y = 1.0012
+
+Descent Direction: p = (0.0014, -0.0001)
+Step Size: ak = 0.0005
+iteration 155: x = 1.0006, y = 1.0012
+
+Descent Direction: p = (0.0004, -0.0006)
+Step Size: ak = 0.0005
+iteration 156: x = 1.0006, y = 1.0012
+
+Descent Direction: p = (-0.0000, -0.0012)
+Step Size: ak = 0.0010
+iteration 157: x = 1.0006, y = 1.0012
+
+Descent Direction: p = (-0.0017, -0.0052)
+Step Size: ak = 0.0020
+iteration 158: x = 1.0006, y = 1.0012
+
+Descent Direction: p = (-0.0208, -0.0499)
+Step Size: ak = 0.0039
+iteration 159: x = 1.0006, y = 1.0012
+
+Descent Direction: p = (-0.0720, -0.1511)
+Step Size: ak = 0.0010
+iteration 160: x = 1.0006, y = 1.0011
+
+Descent Direction: p = (-0.4486, -0.8951)
+Step Size: ak = 0.0039
+iteration 161: x = 1.0003, y = 1.0005
+
+Descent Direction: p = (-0.3905, -0.7383)
+Step Size: ak = 0.0010
+iteration 162: x = 0.9999, y = 0.9997
+
+Descent Direction: p = (-0.0956, -0.1622)
+Step Size: ak = 0.0005
+iteration 163: x = 0.9997, y = 0.9993
+
+Descent Direction: p = (-0.0086, -0.0101)
+Step Size: ak = 0.0005
+iteration 164: x = 0.9996, y = 0.9992
+
+Descent Direction: p = (-0.0015, -0.0006)
+Step Size: ak = 0.0005
+iteration 165: x = 0.9996, y = 0.9992
+
+Descent Direction: p = (-0.0004, 0.0003)
+Step Size: ak = 0.0005
+iteration 166: x = 0.9996, y = 0.9992
+
+Descent Direction: p = (-0.0001, 0.0005)
+Step Size: ak = 0.0010
+iteration 167: x = 0.9996, y = 0.9992
+
+Descent Direction: p = (0.0005, 0.0012)
+Step Size: ak = 0.0010
+iteration 168: x = 0.9996, y = 0.9992
+
+Descent Direction: p = (0.0508, 0.1065)
+Step Size: ak = 0.0625
+iteration 169: x = 0.9996, y = 0.9993
+
+Descent Direction: p = (0.2938, 0.5825)
+Step Size: ak = 0.0039
+iteration 170: x = 0.9998, y = 0.9997
+
+Descent Direction: p = (0.2047, 0.3797)
+Step Size: ak = 0.0010
+iteration 171: x = 1.0001, y = 1.0003
+
+Descent Direction: p = (0.0430, 0.0690)
+Step Size: ak = 0.0005
+iteration 172: x = 1.0002, y = 1.0005
+
+Descent Direction: p = (0.0042, 0.0042)
+Step Size: ak = 0.0005
+iteration 173: x = 1.0002, y = 1.0005
+
+Descent Direction: p = (0.0008, 0.0001)
+Step Size: ak = 0.0005
+iteration 174: x = 1.0002, y = 1.0005
+
+Descent Direction: p = (0.0002, -0.0002)
+Step Size: ak = 0.0005
+iteration 175: x = 1.0002, y = 1.0005
+
+Descent Direction: p = (0.0000, -0.0004)
+Step Size: ak = 0.0010
+iteration 176: x = 1.0002, y = 1.0005
+
+Descent Direction: p = (-0.0005, -0.0017)
+Step Size: ak = 0.0020
+iteration 177: x = 1.0002, y = 1.0005
+
+Descent Direction: p = (-0.0058, -0.0130)
+Step Size: ak = 0.0039
+iteration 178: x = 1.0002, y = 1.0005
+
+Descent Direction: p = (-0.0907, -0.1871)
+Step Size: ak = 0.0078
+iteration 179: x = 1.0002, y = 1.0004
+
+Descent Direction: p = (-0.1784, -0.3485)
+Step Size: ak = 0.0010
+iteration 180: x = 1.0001, y = 1.0002
+
+Descent Direction: p = (-0.0552, -0.0977)
+Step Size: ak = 0.0010
+iteration 181: x = 0.9999, y = 0.9999
+
+Descent Direction: p = (-0.0019, -0.0054)
+Step Size: ak = 0.0010
+iteration 182: x = 0.9999, y = 0.9998
+
+Descent Direction: p = (-0.0002, -0.0025)
+Step Size: ak = 0.0005
+iteration 183: x = 0.9999, y = 0.9998
+
+Descent Direction: p = (0.0002, -0.0002)
+Step Size: ak = 0.0005
+iteration 184: x = 0.9999, y = 0.9998
+
+Descent Direction: p = (0.0000, 0.0000)
+Step Size: ak = 0.0010
+iteration 185: x = 0.9999, y = 0.9998
+
+Descent Direction: p = (-0.0000, 0.0003)
+Step Size: ak = 0.0039
+iteration 186: x = 0.9999, y = 0.9998
+
+Descent Direction: p = (0.0003, 0.0005)
+Step Size: ak = 0.0039
+iteration 187: x = 0.9999, y = 0.9998
+
+Descent Direction: p = (0.0114, 0.0238)
+Step Size: ak = 0.0625
+iteration 188: x = 0.9999, y = 0.9998
+
+Descent Direction: p = (0.0024, 0.0031)
+Step Size: ak = 0.0078
+iteration 189: x = 1.0000, y = 1.0000
+
+Descent Direction: p = (0.0010, 0.0024)
+Step Size: ak = 0.0020
+iteration 190: x = 1.0000, y = 1.0000
+
+Descent Direction: p = (0.0011, 0.0013)
+Step Size: ak = 0.0078
+iteration 191: x = 1.0000, y = 1.0000
+
+Descent Direction: p = (0.0001, 0.0006)
+Step Size: ak = 0.0020
+iteration 192: x = 1.0000, y = 1.0000
+
+Descent Direction: p = (-0.0000, -0.0000)
+Step Size: ak = 0.0020
+iteration 193: x = 1.0000, y = 1.0000
+
+final: x = 1.0000, y = 1.0000
+-------------------------PROBLEM 4-------------------------
+
+initial guess: x = 2.0000, y = -2.0000
+
+Descent Direction: p = (-4.0000, 3.0000)
+Step Size: ak = 0.2500
+iteration 1: x = 2.0000, y = -1.0000
+
+Descent Direction: p = (-1.0000, -1.1250)
+Step Size: ak = 0.5000
+iteration 2: x = 0.0000, y = 0.5000
+
+Descent Direction: p = (0.2290, 0.2937)
+Step Size: ak = 0.5000
+iteration 3: x = -0.5000, y = -0.0625
+
+Descent Direction: p = (0.0408, -0.4101)
+Step Size: ak = 1.0000
+iteration 4: x = -0.2710, y = 0.2312
+
+Descent Direction: p = (0.0457, -0.0109)
+Step Size: ak = 0.5000
+iteration 5: x = -0.2506, y = 0.0261
+
+Descent Direction: p = (0.0438, -0.0069)
+Step Size: ak = 1.0000
+iteration 6: x = -0.2049, y = 0.0151
+
+Descent Direction: p = (0.0264, -0.0041)
+Step Size: ak = 1.0000
+iteration 7: x = -0.1611, y = 0.0082
+
+Descent Direction: p = (0.0190, -0.0009)
+Step Size: ak = 1.0000
+iteration 8: x = -0.1347, y = 0.0041
+
+Descent Direction: p = (0.0136, -0.0011)
+Step Size: ak = 1.0000
+iteration 9: x = -0.1157, y = 0.0032
+
+Descent Direction: p = (0.0106, -0.0007)
+Step Size: ak = 1.0000
+iteration 10: x = -0.1022, y = 0.0021
+
+Descent Direction: p = (0.0086, -0.0002)
+Step Size: ak = 1.0000
+iteration 11: x = -0.0916, y = 0.0014
+
+Descent Direction: p = (0.0070, -0.0003)
+Step Size: ak = 1.0000
+iteration 12: x = -0.0829, y = 0.0012
+
+Descent Direction: p = (0.0059, -0.0003)
+Step Size: ak = 1.0000
+iteration 13: x = -0.0759, y = 0.0009
+
+Descent Direction: p = (0.0050, -0.0001)
+Step Size: ak = 1.0000
+iteration 14: x = -0.0701, y = 0.0006
+
+Descent Direction: p = (0.0043, -0.0001)
+Step Size: ak = 1.0000
+iteration 15: x = -0.0651, y = 0.0005
+
+Descent Direction: p = (0.0038, -0.0001)
+Step Size: ak = 1.0000
+iteration 16: x = -0.0608, y = 0.0005
+
+Descent Direction: p = (0.0033, -0.0001)
+Step Size: ak = 1.0000
+iteration 17: x = -0.0570, y = 0.0004
+
+Descent Direction: p = (0.0029, -0.0000)
+Step Size: ak = 1.0000
+iteration 18: x = -0.0537, y = 0.0003
+
+Descent Direction: p = (0.0026, -0.0000)
+Step Size: ak = 1.0000
+iteration 19: x = -0.0508, y = 0.0003
+
+Descent Direction: p = (0.0023, -0.0001)
+Step Size: ak = 1.0000
+iteration 20: x = -0.0482, y = 0.0002
+
+Descent Direction: p = (0.0021, -0.0000)
+Step Size: ak = 1.0000
+iteration 21: x = -0.0458, y = 0.0002
+
+Descent Direction: p = (0.0019, -0.0000)
+Step Size: ak = 1.0000
+iteration 22: x = -0.0437, y = 0.0002
+
+Descent Direction: p = (0.0018, -0.0000)
+Step Size: ak = 1.0000
+iteration 23: x = -0.0418, y = 0.0002
+
+Descent Direction: p = (0.0016, -0.0000)
+Step Size: ak = 1.0000
+iteration 24: x = -0.0400, y = 0.0001
+
+Descent Direction: p = (0.0015, -0.0000)
+Step Size: ak = 1.0000
+iteration 25: x = -0.0384, y = 0.0001
+
+Descent Direction: p = (0.0014, -0.0000)
+Step Size: ak = 1.0000
+iteration 26: x = -0.0369, y = 0.0001
+
+Descent Direction: p = (0.0013, -0.0000)
+Step Size: ak = 1.0000
+iteration 27: x = -0.0355, y = 0.0001
+
+Descent Direction: p = (0.0012, -0.0000)
+Step Size: ak = 1.0000
+iteration 28: x = -0.0342, y = 0.0001
+
+Descent Direction: p = (0.0011, 0.0000)
+Step Size: ak = 1.0000
+iteration 29: x = -0.0331, y = 0.0001
+
+Descent Direction: p = (0.0010, -0.0000)
+Step Size: ak = 1.0000
+iteration 30: x = -0.0320, y = 0.0001
+
+Descent Direction: p = (0.0010, -0.0000)
+Step Size: ak = 1.0000
+iteration 31: x = -0.0309, y = 0.0001
+
+Descent Direction: p = (0.0009, -0.0000)
+Step Size: ak = 1.0000
+iteration 32: x = -0.0300, y = 0.0001
+
+Descent Direction: p = (0.0009, 0.0000)
+Step Size: ak = 1.0000
+iteration 33: x = -0.0291, y = 0.0000
+
+Descent Direction: p = (0.0008, -0.0000)
+Step Size: ak = 1.0000
+iteration 34: x = -0.0282, y = 0.0000
+
+Descent Direction: p = (0.0008, -0.0000)
+Step Size: ak = 1.0000
+iteration 35: x = -0.0274, y = 0.0000
+
+Descent Direction: p = (0.0007, -0.0000)
+Step Size: ak = 1.0000
+iteration 36: x = -0.0266, y = 0.0000
+
+Descent Direction: p = (0.0007, 0.0000)
+Step Size: ak = 1.0000
+iteration 37: x = -0.0259, y = 0.0000
+
+Descent Direction: p = (0.0006, -0.0000)
+Step Size: ak = 1.0000
+iteration 38: x = -0.0253, y = 0.0000
+
+Descent Direction: p = (0.0006, -0.0000)
+Step Size: ak = 1.0000
+iteration 39: x = -0.0246, y = 0.0000
+
+Descent Direction: p = (0.0006, 0.0000)
+Step Size: ak = 1.0000
+iteration 40: x = -0.0240, y = 0.0000
+
+Descent Direction: p = (0.0006, -0.0000)
+Step Size: ak = 1.0000
+iteration 41: x = -0.0234, y = 0.0000
+
+Descent Direction: p = (0.0005, -0.0000)
+Step Size: ak = 1.0000
+iteration 42: x = -0.0229, y = 0.0000
+
+Descent Direction: p = (0.0005, -0.0000)
+Step Size: ak = 1.0000
+iteration 43: x = -0.0223, y = 0.0000
+
+Descent Direction: p = (0.0005, 0.0000)
+Step Size: ak = 1.0000
+iteration 44: x = -0.0218, y = 0.0000
+
+Descent Direction: p = (0.0005, -0.0000)
+Step Size: ak = 1.0000
+iteration 45: x = -0.0214, y = 0.0000
+
+Descent Direction: p = (0.0004, -0.0000)
+Step Size: ak = 1.0000
+iteration 46: x = -0.0209, y = 0.0000
+
+Descent Direction: p = (0.0004, -0.0000)
+Step Size: ak = 1.0000
+iteration 47: x = -0.0205, y = 0.0000
+
+Descent Direction: p = (0.0004, 0.0000)
+Step Size: ak = 1.0000
+iteration 48: x = -0.0200, y = 0.0000
+
+Descent Direction: p = (0.0004, -0.0000)
+Step Size: ak = 1.0000
+iteration 49: x = -0.0196, y = 0.0000
+
+Descent Direction: p = (0.0004, -0.0000)
+Step Size: ak = 1.0000
+iteration 50: x = -0.0193, y = 0.0000
+
+Descent Direction: p = (0.0004, -0.0000)
+Step Size: ak = 1.0000
+iteration 51: x = -0.0189, y = 0.0000
+
+Descent Direction: p = (0.0003, 0.0000)
+Step Size: ak = 1.0000
+iteration 52: x = -0.0185, y = 0.0000
+
+Descent Direction: p = (0.0003, -0.0000)
+Step Size: ak = 1.0000
+iteration 53: x = -0.0182, y = 0.0000
+
+Descent Direction: p = (0.0003, -0.0000)
+Step Size: ak = 1.0000
+iteration 54: x = -0.0178, y = 0.0000
+
+Descent Direction: p = (0.0003, -0.0000)
+Step Size: ak = 1.0000
+iteration 55: x = -0.0175, y = 0.0000
+
+Descent Direction: p = (0.0003, 0.0000)
+Step Size: ak = 1.0000
+iteration 56: x = -0.0172, y = 0.0000
+
+Descent Direction: p = (0.0003, -0.0000)
+Step Size: ak = 1.0000
+iteration 57: x = -0.0169, y = 0.0000
+
+Descent Direction: p = (0.0003, -0.0000)
+Step Size: ak = 1.0000
+iteration 58: x = -0.0166, y = 0.0000
+
+Descent Direction: p = (0.0003, -0.0000)
+Step Size: ak = 1.0000
+iteration 59: x = -0.0164, y = 0.0000
+
+Descent Direction: p = (0.0003, 0.0000)
+Step Size: ak = 1.0000
+iteration 60: x = -0.0161, y = 0.0000
+
+Descent Direction: p = (0.0003, -0.0000)
+Step Size: ak = 1.0000
+iteration 61: x = -0.0158, y = 0.0000
+
+Descent Direction: p = (0.0002, -0.0000)
+Step Size: ak = 1.0000
+iteration 62: x = -0.0156, y = 0.0000
+
+Descent Direction: p = (0.0002, 0.0000)
+Step Size: ak = 1.0000
+iteration 63: x = -0.0153, y = 0.0000
+
+Descent Direction: p = (0.0002, 0.0000)
+Step Size: ak = 1.0000
+iteration 64: x = -0.0151, y = 0.0000
+
+Descent Direction: p = (0.0002, -0.0000)
+Step Size: ak = 1.0000
+iteration 65: x = -0.0149, y = 0.0000
+
+Descent Direction: p = (0.0002, -0.0000)
+Step Size: ak = 1.0000
+iteration 66: x = -0.0146, y = 0.0000
+
+Descent Direction: p = (0.0002, 0.0000)
+Step Size: ak = 1.0000
+iteration 67: x = -0.0144, y = 0.0000
+
+Descent Direction: p = (0.0002, 0.0000)
+Step Size: ak = 1.0000
+iteration 68: x = -0.0142, y = 0.0000
+
+Descent Direction: p = (0.0002, -0.0000)
+Step Size: ak = 1.0000
+iteration 69: x = -0.0140, y = 0.0000
+
+Descent Direction: p = (0.0002, -0.0000)
+Step Size: ak = 1.0000
+iteration 70: x = -0.0138, y = 0.0000
+
+Descent Direction: p = (0.0002, 0.0000)
+Step Size: ak = 1.0000
+iteration 71: x = -0.0136, y = 0.0000
+
+Descent Direction: p = (0.0002, 0.0000)
+Step Size: ak = 1.0000
+iteration 72: x = -0.0134, y = 0.0000
+
+final: x = -0.0134, y = 0.0000
+-------------------------PROBLEM 5-------------------------
+
+C = 1
+
+initial guess: x = 1.0000, y = -1.0000
+
+Descent Direction: p = (1.5843, 1.7247)
+Step Size: ak = 0.1250
+iteration 1: x = 0.1250, y = 0.3750
+
+Descent Direction: p = (0.5878, -0.6569)
+Step Size: ak = 0.2500
+iteration 2: x = 0.5211, y = 0.8062
+
+Descent Direction: p = (-0.6742, -1.1673)
+Step Size: ak = 0.2500
+iteration 3: x = 0.6680, y = 0.6420
+
+Descent Direction: p = (-0.0023, 0.2560)
+Step Size: ak = 0.1250
+iteration 4: x = 0.5838, y = 0.4960
+
+Descent Direction: p = (-0.1085, 0.0023)
+Step Size: ak = 0.2500
+iteration 5: x = 0.5832, y = 0.5600
+
+Descent Direction: p = (0.0134, 0.0421)
+Step Size: ak = 0.2500
+iteration 6: x = 0.5561, y = 0.5606
+
+Descent Direction: p = (0.0133, -0.0221)
+Step Size: ak = 0.2500
+iteration 7: x = 0.5594, y = 0.5711
+
+Descent Direction: p = (0.0027, 0.0117)
+Step Size: ak = 0.5000
+iteration 8: x = 0.5661, y = 0.5601
+
+Descent Direction: p = (-0.0121, 0.0054)
+Step Size: ak = 0.2500
+iteration 9: x = 0.5667, y = 0.5630
+
+Descent Direction: p = (0.0014, -0.0006)
+Step Size: ak = 0.2500
+iteration 10: x = 0.5637, y = 0.5644
+
+Descent Direction: p = (-0.0001, -0.0014)
+Step Size: ak = 0.5000
+iteration 11: x = 0.5644, y = 0.5641
+
+Descent Direction: p = (-0.0014, -0.0002)
+Step Size: ak = 0.1250
+iteration 12: x = 0.5644, y = 0.5639
+
+Descent Direction: p = (-0.0018, 0.0013)
+Step Size: ak = 0.2500
+iteration 13: x = 0.5640, y = 0.5638
+
+Descent Direction: p = (-0.0005, 0.0029)
+Step Size: ak = 0.0625
+iteration 14: x = 0.5639, y = 0.5639
+
+Descent Direction: p = (0.0007, 0.0002)
+Step Size: ak = 0.1250
+iteration 15: x = 0.5639, y = 0.5643
+
+Descent Direction: p = (0.0009, -0.0010)
+Step Size: ak = 0.2500
+iteration 16: x = 0.5641, y = 0.5643
+
+Descent Direction: p = (-0.0004, -0.0012)
+Step Size: ak = 0.2500
+iteration 17: x = 0.5643, y = 0.5641
+
+Descent Direction: p = (-0.0006, 0.0002)
+Step Size: ak = 0.1250
+iteration 18: x = 0.5642, y = 0.5639
+
+Descent Direction: p = (-0.0004, 0.0010)
+Step Size: ak = 0.2500
+iteration 19: x = 0.5641, y = 0.5640
+
+Descent Direction: p = (0.0003, 0.0004)
+Step Size: ak = 0.1250
+iteration 20: x = 0.5640, y = 0.5641
+
+Descent Direction: p = (0.0001, -0.0001)
+Step Size: ak = 0.1250
+iteration 21: x = 0.5641, y = 0.5641
+
+Descent Direction: p = (-0.0001, -0.0002)
+Step Size: ak = 0.5000
+iteration 22: x = 0.5641, y = 0.5641
+
+Descent Direction: p = (-0.0001, 0.0000)
+Step Size: ak = 0.1250
+iteration 23: x = 0.5641, y = 0.5641
+
+Descent Direction: p = (-0.0001, 0.0002)
+Step Size: ak = 0.2500
+iteration 24: x = 0.5641, y = 0.5641
+
+Descent Direction: p = (0.0001, 0.0001)
+Step Size: ak = 0.1250
+iteration 25: x = 0.5641, y = 0.5641
+
+Descent Direction: p = (0.0000, -0.0000)
+Step Size: ak = 0.1250
+iteration 26: x = 0.5641, y = 0.5641
+
+Descent Direction: p = (0.0000, -0.0001)
+Step Size: ak = 0.2500
+iteration 27: x = 0.5641, y = 0.5641
+
+Descent Direction: p = (-0.0000, -0.0000)
+Step Size: ak = 0.1250
+iteration 28: x = 0.5641, y = 0.5641
+
+final: x = 0.5641, y = 0.5641
+-------------------------PROBLEM 5-------------------------
+
+C = 10
+
+initial guess: x = 1.0000, y = -1.0000
+
+Descent Direction: p = (1.2993, 3.1220)
+Step Size: ak = 0.0156
+iteration 1: x = -0.0938, y = 0.1562
+
+Descent Direction: p = (2.0672, 0.5840)
+Step Size: ak = 0.1250
+iteration 2: x = 0.0687, y = 0.5465
+
+Descent Direction: p = (4.0631, -1.1920)
+Step Size: ak = 0.0625
+iteration 3: x = 0.1979, y = 0.5830
+
+Descent Direction: p = (4.4560, -3.9351)
+Step Size: ak = 0.0312
+iteration 4: x = 0.3248, y = 0.5457
+
+Descent Direction: p = (1.3494, -3.8905)
+Step Size: ak = 0.0312
+iteration 5: x = 0.4641, y = 0.4228
+
+Descent Direction: p = (-0.6549, -0.7004)
+Step Size: ak = 0.0312
+iteration 6: x = 0.5063, y = 0.3012
+
+Descent Direction: p = (-0.5885, 0.3272)
+Step Size: ak = 0.0312
+iteration 7: x = 0.4858, y = 0.2793
+
+Descent Direction: p = (-1.0379, 2.0964)
+Step Size: ak = 0.1250
+iteration 8: x = 0.4122, y = 0.3202
+
+Descent Direction: p = (0.1961, -0.0870)
+Step Size: ak = 0.0625
+iteration 9: x = 0.3474, y = 0.4512
+
+Descent Direction: p = (0.1169, -0.5926)
+Step Size: ak = 0.2500
+iteration 10: x = 0.3964, y = 0.4295
+
+Descent Direction: p = (0.1297, 0.0696)
+Step Size: ak = 0.0625
+iteration 11: x = 0.4037, y = 0.3925
+
+Descent Direction: p = (-0.0632, -0.0005)
+Step Size: ak = 0.0625
+iteration 12: x = 0.4118, y = 0.3968
+
+Descent Direction: p = (-0.0222, 0.0867)
+Step Size: ak = 0.1250
+iteration 13: x = 0.4039, y = 0.3967
+
+Descent Direction: p = (-0.0514, -0.0173)
+Step Size: ak = 0.1250
+iteration 14: x = 0.4011, y = 0.4076
+
+Descent Direction: p = (0.0238, -0.0123)
+Step Size: ak = 0.0625
+iteration 15: x = 0.3979, y = 0.4065
+
+Descent Direction: p = (0.0072, -0.0514)
+Step Size: ak = 0.2500
+iteration 16: x = 0.4038, y = 0.4034
+
+Descent Direction: p = (0.0023, 0.0098)
+Step Size: ak = 0.0625
+iteration 17: x = 0.4043, y = 0.4002
+
+Descent Direction: p = (-0.0180, 0.0051)
+Step Size: ak = 0.1250
+iteration 18: x = 0.4046, y = 0.4014
+
+Descent Direction: p = (-0.0015, 0.0171)
+Step Size: ak = 0.1250
+iteration 19: x = 0.4023, y = 0.4021
+
+Descent Direction: p = (-0.0003, -0.0035)
+Step Size: ak = 0.0625
+iteration 20: x = 0.4022, y = 0.4031
+
+Descent Direction: p = (0.0054, -0.0046)
+Step Size: ak = 0.1250
+iteration 21: x = 0.4022, y = 0.4027
+
+Descent Direction: p = (0.0047, 0.0026)
+Step Size: ak = 0.1250
+iteration 22: x = 0.4029, y = 0.4021
+
+Descent Direction: p = (-0.0009, 0.0027)
+Step Size: ak = 0.0312
+iteration 23: x = 0.4030, y = 0.4022
+
+Descent Direction: p = (-0.0074, 0.0061)
+Step Size: ak = 0.1250
+iteration 24: x = 0.4029, y = 0.4025
+
+Descent Direction: p = (-0.0049, -0.0005)
+Step Size: ak = 0.0625
+iteration 25: x = 0.4025, y = 0.4029
+
+Descent Direction: p = (-0.0018, -0.0026)
+Step Size: ak = 0.0156
+iteration 26: x = 0.4024, y = 0.4029
+
+Descent Direction: p = (0.0006, -0.0026)
+Step Size: ak = 0.0312
+iteration 27: x = 0.4023, y = 0.4028
+
+Descent Direction: p = (0.0041, -0.0038)
+Step Size: ak = 0.0312
+iteration 28: x = 0.4023, y = 0.4027
+
+Descent Direction: p = (0.0038, -0.0003)
+Step Size: ak = 0.0625
+iteration 29: x = 0.4026, y = 0.4025
+
+Descent Direction: p = (-0.0002, 0.0005)
+Step Size: ak = 0.0312
+iteration 30: x = 0.4027, y = 0.4025
+
+Descent Direction: p = (-0.0023, 0.0014)
+Step Size: ak = 0.2500
+iteration 31: x = 0.4027, y = 0.4026
+
+Descent Direction: p = (-0.0005, -0.0005)
+Step Size: ak = 0.0625
+iteration 32: x = 0.4025, y = 0.4027
+
+Descent Direction: p = (0.0002, -0.0006)
+Step Size: ak = 0.0312
+iteration 33: x = 0.4025, y = 0.4027
+
+Descent Direction: p = (0.0019, -0.0016)
+Step Size: ak = 0.1250
+iteration 34: x = 0.4026, y = 0.4026
+
+Descent Direction: p = (0.0020, -0.0004)
+Step Size: ak = 0.0312
+iteration 35: x = 0.4026, y = 0.4026
+
+Descent Direction: p = (0.0000, 0.0002)
+Step Size: ak = 0.0312
+iteration 36: x = 0.4027, y = 0.4026
+
+Descent Direction: p = (-0.0006, 0.0003)
+Step Size: ak = 0.1250
+iteration 37: x = 0.4027, y = 0.4026
+
+Descent Direction: p = (0.0001, 0.0004)
+Step Size: ak = 0.1250
+iteration 38: x = 0.4026, y = 0.4026
+
+Descent Direction: p = (-0.0000, -0.0001)
+Step Size: ak = 0.0625
+iteration 39: x = 0.4026, y = 0.4026
+
+Descent Direction: p = (0.0002, -0.0000)
+Step Size: ak = 0.1250
+iteration 40: x = 0.4026, y = 0.4026
+
+Descent Direction: p = (-0.0001, -0.0001)
+Step Size: ak = 0.1250
+iteration 41: x = 0.4026, y = 0.4026
+
+Descent Direction: p = (0.0000, 0.0000)
+Step Size: ak = 0.0625
+iteration 42: x = 0.4026, y = 0.4026
+
+Descent Direction: p = (-0.0000, -0.0000)
+Step Size: ak = 0.1250
+iteration 43: x = 0.4026, y = 0.4026
+
+Descent Direction: p = (0.0000, 0.0000)
+Step Size: ak = 0.0625
+iteration 44: x = 0.4026, y = 0.4026
+
+final: x = 0.4026, y = 0.4026
+-------------------------PROBLEM 5-------------------------
+
+C = 100
+
+initial guess: x = 1.0000, y = -1.0000
+
+Descent Direction: p = (6.4382, -2.5331)
+Step Size: ak = 0.0020
+iteration 1: x = -0.3672, y = 0.3750
+
+Descent Direction: p = (27.5135, -3.4171)
+Step Size: ak = 0.1250
+iteration 2: x = 0.4376, y = 0.0584
+
+Descent Direction: p = (11.3792, -1.6044)
+Step Size: ak = 0.0039
+iteration 3: x = 0.5451, y = 0.0450
+
+Descent Direction: p = (1.5815, -0.5787)
+Step Size: ak = 0.0000
+iteration 4: x = 0.5451, y = 0.0450
+
+Descent Direction: p = (-8.2162, 0.4470)
+Step Size: ak = 0.0000
+iteration 5: x = 0.5451, y = 0.0450
+
+Descent Direction: p = (2.2874, 2.3253)
+Step Size: ak = 0.0078
+iteration 6: x = 0.4809, y = 0.0485
+
+Descent Direction: p = (-2.2736, 2.7777)
+Step Size: ak = 0.0156
+iteration 7: x = 0.5166, y = 0.0848
+
+Descent Direction: p = (0.6322, 4.9077)
+Step Size: ak = 0.1250
+iteration 8: x = 0.2324, y = 0.4321
+
+Descent Direction: p = (0.7413, -0.2144)
+Step Size: ak = 0.0039
+iteration 9: x = 0.2349, y = 0.4512
+
+Descent Direction: p = (6.2895, -4.5913)
+Step Size: ak = 0.0625
+iteration 10: x = 0.2812, y = 0.4378
+
+Descent Direction: p = (12.1050, -13.8716)
+Step Size: ak = 0.0156
+iteration 11: x = 0.3795, y = 0.3661
+
+Descent Direction: p = (8.2661, -15.5606)
+Step Size: ak = 0.0010
+iteration 12: x = 0.3913, y = 0.3525
+
+Descent Direction: p = (-0.3835, -2.0299)
+Step Size: ak = 0.0039
+iteration 13: x = 0.4236, y = 0.2918
+
+Descent Direction: p = (-0.3791, 0.1092)
+Step Size: ak = 0.0039
+iteration 14: x = 0.4221, y = 0.2838
+
+Descent Direction: p = (-0.8187, 1.2350)
+Step Size: ak = 0.0156
+iteration 15: x = 0.4162, y = 0.2855
+
+Descent Direction: p = (-2.2449, 1.1735)
+Step Size: ak = 0.0625
+iteration 16: x = 0.3650, y = 0.3627
+
+Descent Direction: p = (0.0355, -0.0794)
+Step Size: ak = 0.0078
+iteration 17: x = 0.3475, y = 0.3719
+
+Descent Direction: p = (0.9507, -1.1274)
+Step Size: ak = 0.0625
+iteration 18: x = 0.3497, y = 0.3669
+
+Descent Direction: p = (1.9805, -1.5122)
+Step Size: ak = 0.0039
+iteration 19: x = 0.3534, y = 0.3625
+
+Descent Direction: p = (-0.0314, -0.0046)
+Step Size: ak = 0.0078
+iteration 20: x = 0.3689, y = 0.3507
+
+Descent Direction: p = (-0.0484, 0.0806)
+Step Size: ak = 0.0156
+iteration 21: x = 0.3684, y = 0.3506
+
+Descent Direction: p = (-0.5353, 0.4429)
+Step Size: ak = 0.0625
+iteration 22: x = 0.3653, y = 0.3557
+
+Descent Direction: p = (0.0077, -0.0144)
+Step Size: ak = 0.0156
+iteration 23: x = 0.3570, y = 0.3626
+
+Descent Direction: p = (0.1131, -0.0795)
+Step Size: ak = 0.0625
+iteration 24: x = 0.3575, y = 0.3617
+
+Descent Direction: p = (0.1980, -0.2536)
+Step Size: ak = 0.0312
+iteration 25: x = 0.3610, y = 0.3592
+
+Descent Direction: p = (0.0750, -0.2278)
+Step Size: ak = 0.0020
+iteration 26: x = 0.3614, y = 0.3587
+
+Descent Direction: p = (-0.0010, 0.0063)
+Step Size: ak = 0.0039
+iteration 27: x = 0.3617, y = 0.3578
+
+Descent Direction: p = (-0.0444, 0.0188)
+Step Size: ak = 0.0625
+iteration 28: x = 0.3616, y = 0.3582
+
+Descent Direction: p = (-0.1059, 0.1283)
+Step Size: ak = 0.0312
+iteration 29: x = 0.3602, y = 0.3588
+
+Descent Direction: p = (0.0121, 0.0304)
+Step Size: ak = 0.0156
+iteration 30: x = 0.3586, y = 0.3608
+
+Descent Direction: p = (0.0098, -0.0011)
+Step Size: ak = 0.0039
+iteration 31: x = 0.3586, y = 0.3609
+
+Descent Direction: p = (0.0343, -0.0228)
+Step Size: ak = 0.0156
+iteration 32: x = 0.3588, y = 0.3609
+
+Descent Direction: p = (0.1508, -0.1536)
+Step Size: ak = 0.0156
+iteration 33: x = 0.3593, y = 0.3606
+
+Descent Direction: p = (0.0970, -0.1571)
+Step Size: ak = 0.0078
+iteration 34: x = 0.3605, y = 0.3594
+
+Descent Direction: p = (0.0125, -0.0663)
+Step Size: ak = 0.0020
+iteration 35: x = 0.3607, y = 0.3591
+
+Descent Direction: p = (-0.0080, -0.0124)
+Step Size: ak = 0.0020
+iteration 36: x = 0.3607, y = 0.3589
+
+Descent Direction: p = (-0.0071, 0.0000)
+Step Size: ak = 0.0039
+iteration 37: x = 0.3607, y = 0.3589
+
+Descent Direction: p = (-0.0112, 0.0110)
+Step Size: ak = 0.0039
+iteration 38: x = 0.3606, y = 0.3589
+
+Descent Direction: p = (-0.0060, 0.0248)
+Step Size: ak = 0.1250
+iteration 39: x = 0.3592, y = 0.3602
+
+Descent Direction: p = (0.0041, 0.0019)
+Step Size: ak = 0.0039
+iteration 40: x = 0.3592, y = 0.3603
+
+Descent Direction: p = (0.0062, -0.0034)
+Step Size: ak = 0.0078
+iteration 41: x = 0.3592, y = 0.3604
+
+Descent Direction: p = (0.0390, -0.0419)
+Step Size: ak = 0.0312
+iteration 42: x = 0.3594, y = 0.3603
+
+Descent Direction: p = (0.0058, -0.0220)
+Step Size: ak = 0.0156
+iteration 43: x = 0.3601, y = 0.3596
+
+Descent Direction: p = (-0.0021, -0.0005)
+Step Size: ak = 0.0039
+iteration 44: x = 0.3601, y = 0.3595
+
+Descent Direction: p = (-0.0029, 0.0022)
+Step Size: ak = 0.0078
+iteration 45: x = 0.3601, y = 0.3595
+
+Descent Direction: p = (-0.0185, 0.0244)
+Step Size: ak = 0.0625
+iteration 46: x = 0.3599, y = 0.3596
+
+Descent Direction: p = (0.0007, 0.0009)
+Step Size: ak = 0.0078
+iteration 47: x = 0.3597, y = 0.3598
+
+Descent Direction: p = (0.0002, -0.0003)
+Step Size: ak = 0.0078
+iteration 48: x = 0.3597, y = 0.3598
+
+Descent Direction: p = (0.0025, 0.0000)
+Step Size: ak = 0.2500
+iteration 49: x = 0.3598, y = 0.3598
+
+Descent Direction: p = (-0.0002, -0.0005)
+Step Size: ak = 0.0078
+iteration 50: x = 0.3598, y = 0.3598
+
+Descent Direction: p = (-0.0001, 0.0001)
+Step Size: ak = 0.0078
+iteration 51: x = 0.3598, y = 0.3598
+
+Descent Direction: p = (-0.0025, 0.0027)
+Step Size: ak = 0.1250
+iteration 52: x = 0.3598, y = 0.3598
+
+Descent Direction: p = (-0.0032, 0.0024)
+Step Size: ak = 0.0010
+iteration 53: x = 0.3598, y = 0.3598
+
+Descent Direction: p = (-0.0005, 0.0001)
+Step Size: ak = 0.0039
+iteration 54: x = 0.3598, y = 0.3598
+
+Descent Direction: p = (0.0000, -0.0000)
+Step Size: ak = 0.0039
+iteration 55: x = 0.3598, y = 0.3598
+
+Descent Direction: p = (0.0005, -0.0003)
+Step Size: ak = 0.1250
+iteration 56: x = 0.3598, y = 0.3598
+
+Descent Direction: p = (0.0001, -0.0003)
+Step Size: ak = 0.0156
+iteration 57: x = 0.3598, y = 0.3598
+
+Descent Direction: p = (-0.0000, 0.0000)
+Step Size: ak = 0.0078
+iteration 58: x = 0.3598, y = 0.3598
+
+final: x = 0.3598, y = 0.3598
