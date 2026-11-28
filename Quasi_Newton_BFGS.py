@@ -157,7 +157,7 @@ for function in functions_3:
         while (it < itmax and norm3(f,x,y,z) > e):
             it +=1
             x,y,z,Bk = quasi_newton_bfgs_3(f,x,y,z,Bk)
-            print(f"iteration {it}: x = {x:.4f}, y = {y:.4f}, z = {z:.4f}, Bk = {Bk.evalf(4)}\n")
+            print(f"iteration {it}: x = {x:.4f}, y = {y:.4f}, z = {z:.4f}\n")
     except ValueError as v:
         print(f"error: {v}\n")
 
@@ -177,7 +177,7 @@ for function in functions_2:
             it +=1
 
             x,y,Bk = quasi_newton_bfgs_2(f,x,y,Bk)
-            print(f"iteration {it}: x = {x:.4f}, y = {y:.4f}, Bk = {Bk.evalf(4)}\n")
+            print(f"iteration {it}: x = {x:.4f}, y = {y:.4f}\n")
     except ValueError as v:
         print(f"error: {v}\n")
 
@@ -199,7 +199,7 @@ for C in [1, 10, 100]:
         while (it < itmax and norm2(f,x,y) > e):
             it +=1
             x,y,Bk = quasi_newton_bfgs_2(f,x,y,Bk)
-            print(f"iteration {it}: x = {x:.4f}, y = {y:.4f}, Bk = {Bk.evalf(4)}\n")
+            print(f"iteration {it}: x = {x:.4f}, y = {y:.4f}\n")
     except ValueError as v:
         print(f"error: {v}\n")
 
